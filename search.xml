@@ -251,27 +251,61 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/11/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <title>字符串 &amp; 输入输出</title>
+    <url>/2024/11/25/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&amp;%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<p>字符串</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><p><code>scanf</code> 读字符时会读入空格、换行</p>
+<p><code>scanf</code> 读字符串时不会读入空格、换行</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c,cc;</span><br><span class="line"><span class="type">int</span> x;</span><br><span class="line">cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%c%c&quot;</span>,&amp;x,&amp;c,&amp;cc);</span><br><span class="line">cout&lt;&lt;c&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;cc;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>输入</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><strong>输出</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p><code>cin</code> 不会读入开始的换行、空格，遇到空格、换行停止</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//char s[1000];</span></span><br><span class="line"><span class="comment">//char s;</span></span><br><span class="line">string s;</span><br><span class="line">cin&gt;&gt;s;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h3><p><code>getchar</code> 会读入换行和空格，但是不能与IOS同时使用。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="ignore"><a href="#ignore" class="headerlink" title="ignore()"></a>ignore()</h3><p>从输入流中移除（忽略）下一个字符</p>
+<p>如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 <code>cin.ignore()</code> 函数执行终止；否则，它继续等待。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>(a,ch)</span><br></pre></td></tr></table></figure>
+
+<h3 id="getline"><a href="#getline" class="headerlink" title="getline()"></a>getline()</h3><p>读入一行字符串，遇到换行停止。使用前一般先清除缓存区换行符。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
+
+<p><strong>清除缓存区换行方法：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getchar</span>();      <span class="comment">//不能与IOS同时使用。</span></span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
+
+<h3 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h3><p><code>stringstream</code> 可以逐个读取单词（或更准确地说，是由空白字符分隔的字符串序列）。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br><span class="line"><span class="function">stringstream <span class="title">ss</span><span class="params">(s)</span></span>;   <span class="comment">//将ss初始化为s</span></span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;str)&#123;       <span class="comment">//逐个读取单词，读取到str中</span></span><br><span class="line">    cout&lt;&lt;str&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">八进制: %o</span><br><span class="line">十六进制: %x</span><br></pre></td></tr></table></figure>
+
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p><a href="https://blog.csdn.net/fdqw_sph/article/details/54233971">c++中的string常用函数用法总结_c++string函数-CSDN博客</a></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">s</span><span class="params">(num,c)</span> <span class="comment">//生成一个字符串，包含num个c字符</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(str,\stridx,\strlen)</span> <span class="comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="插入-删除字符-串"><a href="#插入-删除字符-串" class="headerlink" title="插入&#x2F;删除字符 (串)"></a>插入&#x2F;删除字符 (串)</h3><p><code>insert (index, count, ch)</code> 和 <code>insert (index, str)</code> 是比较常见的插入函数。它们分别表示在 <code>index</code> 处连续插入 <code>count</code> 次字符串 $ch$ 和插入字符串 $str$ 。时间复杂度 $O(|s|-index+count)$ 。</p>
+<p><code>erase(index, count)</code> 函数将字符串 <code>index</code> 位置开始 (含) 的 <code>count</code> 个字符删除（若不传参给 <code>count</code> 则表示删去 <code>index</code> 位置及以后的所有字符）。</p>
+<h2 id="字符串整数互换"><a href="#字符串整数互换" class="headerlink" title="字符串整数互换"></a>字符串整数互换</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string str = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="type">int</span> num;</span><br><span class="line">num = std::<span class="built_in">stoi</span>(str)   <span class="comment">// string -&gt; int</span></span><br><span class="line">num = std::<span class="built_in">stoll</span>(str)   <span class="comment">// string -&gt; long long</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;456&quot;</span>;</span><br><span class="line"><span class="type">int</span> num = std::<span class="built_in">atoi</span>(str);   <span class="comment">// char -&gt; int</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">std::string str = <span class="built_in">to_string</span>(num); <span class="comment">// int -&gt; string</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>杂项</category>
+        <category>板子</category>
       </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>字符串</tag>
+      </tags>
   </entry>
   <entry>
     <title>图论</title>
@@ -485,63 +519,6 @@
       </tags>
   </entry>
   <entry>
-    <title>字符串 &amp; 输入输出</title>
-    <url>/2024/11/25/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&amp;%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
-    <content><![CDATA[<p>字符串</p>
-<span id="more"></span>
-
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><p><code>scanf</code> 读字符时会读入空格、换行</p>
-<p><code>scanf</code> 读字符串时不会读入空格、换行</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c,cc;</span><br><span class="line"><span class="type">int</span> x;</span><br><span class="line">cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%c%c&quot;</span>,&amp;x,&amp;c,&amp;cc);</span><br><span class="line">cout&lt;&lt;c&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;cc;</span><br></pre></td></tr></table></figure>
-
-<p><strong>输入</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>输出</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p><code>cin</code> 不会读入开始的换行、空格，遇到空格、换行停止</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//char s[1000];</span></span><br><span class="line"><span class="comment">//char s;</span></span><br><span class="line">string s;</span><br><span class="line">cin&gt;&gt;s;</span><br></pre></td></tr></table></figure>
-
-<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h3><p><code>getchar</code> 会读入换行和空格，但是不能与IOS同时使用。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br></pre></td></tr></table></figure>
-
-<h3 id="ignore"><a href="#ignore" class="headerlink" title="ignore()"></a>ignore()</h3><p>从输入流中移除（忽略）下一个字符</p>
-<p>如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 <code>cin.ignore()</code> 函数执行终止；否则，它继续等待。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>(a,ch)</span><br></pre></td></tr></table></figure>
-
-<h3 id="getline"><a href="#getline" class="headerlink" title="getline()"></a>getline()</h3><p>读入一行字符串，遇到换行停止。使用前一般先清除缓存区换行符。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
-
-<p><strong>清除缓存区换行方法：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getchar</span>();      <span class="comment">//不能与IOS同时使用。</span></span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
-
-<h3 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h3><p><code>stringstream</code> 可以逐个读取单词（或更准确地说，是由空白字符分隔的字符串序列）。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br><span class="line"><span class="function">stringstream <span class="title">ss</span><span class="params">(s)</span></span>;   <span class="comment">//将ss初始化为s</span></span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;str)&#123;       <span class="comment">//逐个读取单词，读取到str中</span></span><br><span class="line">    cout&lt;&lt;str&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">八进制: %o</span><br><span class="line">十六进制: %x</span><br></pre></td></tr></table></figure>
-
-<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p><a href="https://blog.csdn.net/fdqw_sph/article/details/54233971">c++中的string常用函数用法总结_c++string函数-CSDN博客</a></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">s</span><span class="params">(num,c)</span> <span class="comment">//生成一个字符串，包含num个c字符</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(str,\stridx,\strlen)</span> <span class="comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="插入-删除字符-串"><a href="#插入-删除字符-串" class="headerlink" title="插入&#x2F;删除字符 (串)"></a>插入&#x2F;删除字符 (串)</h3><p><code>insert (index, count, ch)</code> 和 <code>insert (index, str)</code> 是比较常见的插入函数。它们分别表示在 <code>index</code> 处连续插入 <code>count</code> 次字符串 $ch$ 和插入字符串 $str$ 。时间复杂度 $O(|s|-index+count)$ 。</p>
-<p><code>erase(index, count)</code> 函数将字符串 <code>index</code> 位置开始 (含) 的 <code>count</code> 个字符删除（若不传参给 <code>count</code> 则表示删去 <code>index</code> 位置及以后的所有字符）。</p>
-<h2 id="字符串整数互换"><a href="#字符串整数互换" class="headerlink" title="字符串整数互换"></a>字符串整数互换</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string str = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="type">int</span> num;</span><br><span class="line">num = std::<span class="built_in">stoi</span>(str)   <span class="comment">// string -&gt; int</span></span><br><span class="line">num = std::<span class="built_in">stoll</span>(str)   <span class="comment">// string -&gt; long long</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;456&quot;</span>;</span><br><span class="line"><span class="type">int</span> num = std::<span class="built_in">atoi</span>(str);   <span class="comment">// char -&gt; int</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">std::string str = <span class="built_in">to_string</span>(num); <span class="comment">// int -&gt; string</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>板子</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构</title>
     <url>/2024/11/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<p>数据结构</p>
@@ -633,6 +610,29 @@
         <tag>算法</tag>
         <tag>数据结构</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/11/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
   </entry>
   <entry>
     <title>杂项</title>
