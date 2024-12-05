@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora使用技巧</title>
-    <url>/2024/11/25/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>使用技巧</p>
-<span id="more"></span>
-
-<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
-<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">      _______<br>     <span class="hljs-comment">//  ||\ \</span><br><span class="hljs-comment"> ___//___||_\ \___</span><br> )  _          _    \<br> |_/ \________/ \___|<br>___\_/________\_/______<br></code></pre></td></tr></table></figure>
-
-<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// vector不能用memset()</span><br>vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(m<span class="hljs-number">+3</span>));<br>vector&lt;vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;(m<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(h<span class="hljs-number">+3</span>)));<br><span class="hljs-keyword">auto</span> check=[&amp;](<span class="hljs-type">int</span> x)&#123;<br>    <span class="hljs-type">int</span> pre=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)&#123;<br>            <span class="hljs-keyword">if</span>(a[i][j]&lt;=x)&#123;<br>                <span class="hljs-keyword">if</span>(j&lt;pre) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                pre=j;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">vector&lt;array&lt;<span class="hljs-type">int</span>,3&gt;&gt; que;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;<br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>板子</category>
-      </categories>
-      <tags>
-        <tag>使用文档</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>STL &amp; 各种函数、容器</title>
     <url>/2024/11/25/STL%20&amp;%20%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p>Fragmented knowledge points+STL</p>
@@ -147,6 +124,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Typora使用技巧</title>
+    <url>/2024/11/25/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>使用技巧</p>
+<span id="more"></span>
+
+<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
+<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">      _______<br>     <span class="hljs-comment">//  ||\ \</span><br><span class="hljs-comment"> ___//___||_\ \___</span><br> )  _          _    \<br> |_/ \________/ \___|<br>___\_/________\_/______<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// vector不能用memset()</span><br>vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(m<span class="hljs-number">+3</span>));<br>vector&lt;vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;(m<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(h<span class="hljs-number">+3</span>)));<br><span class="hljs-keyword">auto</span> check=[&amp;](<span class="hljs-type">int</span> x)&#123;<br>    <span class="hljs-type">int</span> pre=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)&#123;<br>            <span class="hljs-keyword">if</span>(a[i][j]&lt;=x)&#123;<br>                <span class="hljs-keyword">if</span>(j&lt;pre) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                pre=j;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">vector&lt;array&lt;<span class="hljs-type">int</span>,3&gt;&gt; que;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>板子</category>
+      </categories>
+      <tags>
+        <tag>使用文档</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>dp</title>
     <url>/2024/11/25/dp/</url>
     <content><![CDATA[<p>动态规划</p>
@@ -249,6 +249,29 @@
         <tag>算法</tag>
         <tag>dp</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/11/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
   </entry>
   <entry>
     <title>字符串 &amp; 输入输出</title>
@@ -612,29 +635,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/11/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数论</title>
     <url>/2024/11/25/%E6%95%B0%E8%AE%BA/</url>
     <content><![CDATA[<p>数论</p>
@@ -746,6 +746,35 @@
       </tags>
   </entry>
   <entry>
+    <title>计算几何</title>
+    <url>/2024/11/25/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/oneway10101/p/17642080.html#%E6%B1%82%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AFpolygon_area">计算几何基本模板（二维）</a></p>
+<span id="more"></span>
+
+<p><strong>直线方向向量</strong></p>
+<p>对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。</p>
+<p>设一般方程: $A x+B y+C&#x3D;0$<br>写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$<br>那么它的斜率 $k&#x3D;-\frac{A}{B}$<br>过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$<br>取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。</p>
+<p><strong>两直线交点</strong></p>
+<p>直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$<br>直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$</p>
+<p>两条直线 $l_1$ 和 $l_2$ 的交点是：<br>$$<br>\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2} \right)<br>$$</p>
+<p>注意：如果 $A_2B_1 - A_1B_2 &#x3D; 0$，则方程组无解（平行且不重合）或有无穷多解（重合）。</p>
+<p><strong>直线一般式</strong></p>
+<p>$fs(x)$ 防止输出 $-0.00$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-6</span>;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> fs(x) (abs(x) &lt; eps) ? 0 : (x)</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> node&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x == b.x &amp;&amp; y == b.y;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Line</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, b, c;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a ? (b == l.b ? c &lt; l.c : b &lt; l.b) : (a &lt; l.a);<br>	&#125;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a &amp;&amp; b == l.b &amp;&amp; c == l.c;<br>	&#125;<br><br>	<span class="hljs-comment">// 直线是否过点A</span><br>	<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">through</span><span class="hljs-params">(node A)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> a * A.x + b * A.y + c == <span class="hljs-number">0</span>;<br>	&#125;<br>&#125;;<br><br><span class="hljs-comment">// l1,l2是否相交</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">intersect</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> !(l<span class="hljs-number">1.</span>a * l<span class="hljs-number">2.</span>b == l<span class="hljs-number">1.</span>b * l<span class="hljs-number">2.</span>a);<br>&#125;<br><br><span class="hljs-comment">// l1,l2交点</span><br><span class="hljs-function">Point <span class="hljs-title">intersection</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-type">double</span> A1 = l<span class="hljs-number">1.</span>a, B1 = l<span class="hljs-number">1.</span>b, C1 = l<span class="hljs-number">1.</span>c, A2 = l<span class="hljs-number">2.</span>a, B2 = l<span class="hljs-number">2.</span>b, C2 = l<span class="hljs-number">2.</span>c;<br>	<span class="hljs-keyword">return</span> &#123; (B1 * C2 - B2 * C1) / (A1 * B2 - A2 * B1),(A1 * C2 - A2 * C1) / (A2 * B1 - A1 * B2) &#125;;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">gcd</span><span class="hljs-params">(<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, <span class="hljs-type">long</span> <span class="hljs-type">long</span> b)</span> </span>&#123;<br>	<span class="hljs-keyword">if</span> (!b) <span class="hljs-keyword">return</span> a;<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">gcd</span>(b, a % b);<br>&#125;<br><br><span class="hljs-comment">// x1,x2不能相等</span><br><span class="hljs-function">Line <span class="hljs-title">make_line</span><span class="hljs-params">(node x1, node x2)</span> </span>&#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a = x<span class="hljs-number">1.</span>y - x<span class="hljs-number">2.</span>y;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> b = x<span class="hljs-number">2.</span>x - x<span class="hljs-number">1.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> c = x<span class="hljs-number">1.</span>x * x<span class="hljs-number">2.</span>y - x<span class="hljs-number">1.</span>y * x<span class="hljs-number">2.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> g = <span class="hljs-built_in">gcd</span>(a, <span class="hljs-built_in">gcd</span>(b, c));<br>	a /= g, b /= g, c /= g;<br>	<span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>		a = -a, b = -b, c = -c;<br>	&#125;<br>	<span class="hljs-keyword">return</span> Line&#123; a,b,c &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>凸包</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> Pi = <span class="hljs-number">3.141592653589793</span>;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x != b.x ? x &lt; b.x : y &lt; b.y;<br>	&#125;<br><br>	Point <span class="hljs-keyword">operator</span>+(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x + b.x,y + b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 向量</span><br>	Point <span class="hljs-keyword">operator</span>-(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x - b.x,y - b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 点积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>*(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.x + y * b.y;<br>	&#125;<br><br>    <span class="hljs-comment">// 叉积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>^(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.y - y * b.x;<br>	&#125;<br><br>    <span class="hljs-comment">// 两点距离</span><br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">dis</span><span class="hljs-params">(Point b)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-built_in">hypot</span>(x - b.x, y - b.y);<br>	&#125;<br><br>    <span class="hljs-comment">// 绕p逆时针转angle弧度</span><br>	<span class="hljs-function">Point <span class="hljs-title">rotate</span><span class="hljs-params">(Point p, <span class="hljs-type">double</span> angle)</span> </span>&#123;<br>		Point v = (*<span class="hljs-keyword">this</span>) - p;<br>		<span class="hljs-type">double</span> c = <span class="hljs-built_in">cos</span>(angle), s = <span class="hljs-built_in">sin</span>(angle);<br>		<span class="hljs-keyword">return</span> &#123; p.x + v.x * c - v.y * s,p.y + v.y * c + v.x * s &#125;;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">is_right</span><span class="hljs-params">(Point a, Point b, Point c)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> ((c - a) ^ (b - a)) &gt;= <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-built_in">sort</span>(p + <span class="hljs-number">1</span>, p + <span class="hljs-number">1</span> + size);<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i++) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br><span class="hljs-type">int</span> len = tt;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = size; i &gt;= <span class="hljs-number">1</span>; i--) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= len + <span class="hljs-number">1</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>板子</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>计算几何</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杂项</title>
     <url>/2024/11/25/%E6%9D%82%E9%A1%B9/</url>
     <content><![CDATA[<p>杂项</p>
@@ -811,35 +840,6 @@
       <tags>
         <tag>算法</tag>
         <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算几何</title>
-    <url>/2024/11/25/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/oneway10101/p/17642080.html#%E6%B1%82%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AFpolygon_area">计算几何基本模板（二维）</a></p>
-<span id="more"></span>
-
-<p><strong>直线方向向量</strong></p>
-<p>对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。</p>
-<p>设一般方程: $A x+B y+C&#x3D;0$<br>写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$<br>那么它的斜率 $k&#x3D;-\frac{A}{B}$<br>过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$<br>取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。</p>
-<p><strong>两直线交点</strong></p>
-<p>直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$<br>直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$</p>
-<p>两条直线 $l_1$ 和 $l_2$ 的交点是：<br>$$<br>\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2} \right)<br>$$</p>
-<p>注意：如果 $A_2B_1 - A_1B_2 &#x3D; 0$，则方程组无解（平行且不重合）或有无穷多解（重合）。</p>
-<p><strong>直线一般式</strong></p>
-<p>$fs(x)$ 防止输出 $-0.00$ 。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-6</span>;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> fs(x) (abs(x) &lt; eps) ? 0 : (x)</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> node&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x == b.x &amp;&amp; y == b.y;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Line</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, b, c;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a ? (b == l.b ? c &lt; l.c : b &lt; l.b) : (a &lt; l.a);<br>	&#125;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a &amp;&amp; b == l.b &amp;&amp; c == l.c;<br>	&#125;<br><br>	<span class="hljs-comment">// 直线是否过点A</span><br>	<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">through</span><span class="hljs-params">(node A)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> a * A.x + b * A.y + c == <span class="hljs-number">0</span>;<br>	&#125;<br>&#125;;<br><br><span class="hljs-comment">// l1,l2是否相交</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">intersect</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> !(l<span class="hljs-number">1.</span>a * l<span class="hljs-number">2.</span>b == l<span class="hljs-number">1.</span>b * l<span class="hljs-number">2.</span>a);<br>&#125;<br><br><span class="hljs-comment">// l1,l2交点</span><br><span class="hljs-function">Point <span class="hljs-title">intersection</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-type">double</span> A1 = l<span class="hljs-number">1.</span>a, B1 = l<span class="hljs-number">1.</span>b, C1 = l<span class="hljs-number">1.</span>c, A2 = l<span class="hljs-number">2.</span>a, B2 = l<span class="hljs-number">2.</span>b, C2 = l<span class="hljs-number">2.</span>c;<br>	<span class="hljs-keyword">return</span> &#123; (B1 * C2 - B2 * C1) / (A1 * B2 - A2 * B1),(A1 * C2 - A2 * C1) / (A2 * B1 - A1 * B2) &#125;;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">gcd</span><span class="hljs-params">(<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, <span class="hljs-type">long</span> <span class="hljs-type">long</span> b)</span> </span>&#123;<br>	<span class="hljs-keyword">if</span> (!b) <span class="hljs-keyword">return</span> a;<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">gcd</span>(b, a % b);<br>&#125;<br><br><span class="hljs-comment">// x1,x2不能相等</span><br><span class="hljs-function">Line <span class="hljs-title">make_line</span><span class="hljs-params">(node x1, node x2)</span> </span>&#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a = x<span class="hljs-number">1.</span>y - x<span class="hljs-number">2.</span>y;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> b = x<span class="hljs-number">2.</span>x - x<span class="hljs-number">1.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> c = x<span class="hljs-number">1.</span>x * x<span class="hljs-number">2.</span>y - x<span class="hljs-number">1.</span>y * x<span class="hljs-number">2.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> g = <span class="hljs-built_in">gcd</span>(a, <span class="hljs-built_in">gcd</span>(b, c));<br>	a /= g, b /= g, c /= g;<br>	<span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>		a = -a, b = -b, c = -c;<br>	&#125;<br>	<span class="hljs-keyword">return</span> Line&#123; a,b,c &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p><strong>凸包</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> Pi = <span class="hljs-number">3.141592653589793</span>;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x != b.x ? x &lt; b.x : y &lt; b.y;<br>	&#125;<br><br>	Point <span class="hljs-keyword">operator</span>+(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x + b.x,y + b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 向量</span><br>	Point <span class="hljs-keyword">operator</span>-(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x - b.x,y - b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 点积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>*(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.x + y * b.y;<br>	&#125;<br><br>    <span class="hljs-comment">// 叉积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>^(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.y - y * b.x;<br>	&#125;<br><br>    <span class="hljs-comment">// 两点距离</span><br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">dis</span><span class="hljs-params">(Point b)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-built_in">hypot</span>(x - b.x, y - b.y);<br>	&#125;<br><br>    <span class="hljs-comment">// 绕p逆时针转angle弧度</span><br>	<span class="hljs-function">Point <span class="hljs-title">rotate</span><span class="hljs-params">(Point p, <span class="hljs-type">double</span> angle)</span> </span>&#123;<br>		Point v = (*<span class="hljs-keyword">this</span>) - p;<br>		<span class="hljs-type">double</span> c = <span class="hljs-built_in">cos</span>(angle), s = <span class="hljs-built_in">sin</span>(angle);<br>		<span class="hljs-keyword">return</span> &#123; p.x + v.x * c - v.y * s,p.y + v.y * c + v.x * s &#125;;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">is_right</span><span class="hljs-params">(Point a, Point b, Point c)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> ((c - a) ^ (b - a)) &gt;= <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-built_in">sort</span>(p + <span class="hljs-number">1</span>, p + <span class="hljs-number">1</span> + size);<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i++) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br><span class="hljs-type">int</span> len = tt;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = size; i &gt;= <span class="hljs-number">1</span>; i--) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= len + <span class="hljs-number">1</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>板子</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>计算几何</tag>
       </tags>
   </entry>
 </search>
