@@ -19,21 +19,23 @@
   <meta name="author" content="pugong">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+    <meta name="description" content="python常用库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://daohaipugong.github.io/2024/11/25/hello-world/index.html">
+<meta property="og:title" content="python常用库">
+<meta property="og:url" content="https://daohaipugong.github.io/2024/12/20/python%E7%AC%94%E8%AE%B0/%E5%B8%B8%E7%94%A8%E5%BA%93/index.html">
 <meta property="og:site_name" content="Pugong&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="python常用库">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-25T09:11:23.817Z">
-<meta property="article:modified_time" content="2024-11-25T10:59:27.933Z">
+<meta property="article:published_time" content="2024-12-20T04:46:17.544Z">
+<meta property="article:modified_time" content="2024-12-20T04:56:25.767Z">
 <meta property="article:author" content="pugong">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Pugong&#39;s Blog</title>
+  <title>python常用库 - Pugong&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="python常用库"></span>
           
         </div>
 
@@ -210,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-25 17:11" pubdate>
-          2024年11月25日 下午
+        <time datetime="2024-12-20 12:46" pubdate>
+          2024年12月20日 下午
         </time>
       </span>
     
@@ -222,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          343 字
         
       </span>
     
@@ -233,7 +235,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -270,12 +272,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">python常用库</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年11月25日 晚上
+                    本文最后更新于 2024年12月20日 下午
                   
                 
               </p>
@@ -283,21 +285,30 @@
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+                <p>python常用库</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="decimal"><a href="#decimal" class="headerlink" title="decimal"></a>decimal</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39147299/article/details/124200896">【python】Decimal的使用</a></p>
+<p>用于浮点数和较大的数据进行运算。</p>
+<h3 id="1-精度"><a href="#1-精度" class="headerlink" title="1.精度"></a>1.精度</h3><p>decimal的精度默认是28位，可以自定义，通过getcontext获取线程上下文，然后修改prec属性即可</p>
+<p>prec代表有效数字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal, getcontext<br><br><span class="hljs-built_in">print</span>(getcontext().prec)  <span class="hljs-comment"># 计算精度，默认是28  </span><br>getcontext().prec = <span class="hljs-number">100</span>  <span class="hljs-comment"># 可修改</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># from decimal import Decimal,Context,setcontext</span><br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> *<br>setcontext(Context(prec=<span class="hljs-number">10000000</span>,Emax=<span class="hljs-number">3000000</span>,Emin=<span class="hljs-number">0</span>))   <span class="hljs-comment">#有效数字，最大指数，最小指数</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<h3 id="2-Decimal"><a href="#2-Decimal" class="headerlink" title="2.Decimal"></a>2.Decimal</h3><p>通过实例化Decimal对象时传入value参数把其他的数据类型转换成Decimal类型。注意，尽量传入整数和字符串，如果传入float会导致结果不准确（float本身就存在精度问题）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">a = Decimal(<span class="hljs-string">&quot;5632569878.6514126&quot;</span>)  <span class="hljs-comment"># 字符串</span><br>c = Decimal(<span class="hljs-number">63</span>)  <span class="hljs-comment"># 整数</span><br>d = Decimal.from_float(<span class="hljs-number">6.325</span>)  <span class="hljs-comment"># Decimal(6.32500000000000017763568394002504646778106689453125), 不准确</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>Decimal类型也可以像python基本数据类型那样进行加减乘除等运算，运算完后还是Decimal类型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">a = Decimal(<span class="hljs-string">&quot;8.651&quot;</span>)  <span class="hljs-comment"># Decimal(8.651)</span><br>b = Decimal(<span class="hljs-string">&quot;7&quot;</span>)  <span class="hljs-comment"># Decimal(7)</span><br><br><span class="hljs-built_in">print</span>(a // b)  <span class="hljs-comment"># Decimal(1)</span><br><span class="hljs-built_in">print</span>(a ** <span class="hljs-number">2</span>)  <span class="hljs-comment"># Decimal(74.839801)</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="sys"><a href="#sys" class="headerlink" title="sys"></a>sys</h2><p><code>sys.stdin.read()</code> 的使用是用来从标准输入（stdin）读取所有的数据，直到输入结束（EOF，即文件结束符）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><span class="hljs-built_in">input</span> = sys.stdin.read<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 如果是n，m，则date[i*2+0]，date[i*2+1]</span><br>n=<span class="hljs-built_in">int</span>(date[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    a=<span class="hljs-built_in">int</span>(date[i*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>])<br>    b=<span class="hljs-built_in">int</span>(date[i*<span class="hljs-number">2</span>+<span class="hljs-number">2</span>])<br></code></pre></td></tr></table></figure>
+
+<h2 id="heapq"><a href="#heapq" class="headerlink" title="heapq"></a>heapq</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/chandelierds/article/details/91357784">Python中heapq模块浅析_heapq.heappush-CSDN博客</a></p>
+<h2 id="bisect（二分）"><a href="#bisect（二分）" class="headerlink" title="bisect（二分）"></a>bisect（二分）</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hider/p/14711550.html">https://www.cnblogs.com/hider/p/14711550.html</a></p>
 
                 
               </div>
@@ -316,7 +327,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%9D%82%E9%A1%B9/" class="category-chain-item">杂项</a>
+  <a href="/categories/python%E7%AC%94%E8%AE%B0/" class="category-chain-item">python笔记</a>
   
   
 
@@ -328,6 +339,15 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/python/" class="print-no-link">#python</a>
+      
+        <a href="/tags/%E8%AF%AD%E6%B3%95/" class="print-no-link">#语法</a>
+      
+    </div>
+  
 </div>
 
 
@@ -336,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>https://daohaipugong.github.io/2024/11/25/hello-world/</div>
+      <div>python常用库</div>
+      <div>https://daohaipugong.github.io/2024/12/20/python笔记/常用库/</div>
     </div>
     <div class="license-meta">
       
@@ -349,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月25日</div>
+          <div>2024年12月20日</div>
         </div>
       
       
@@ -381,15 +401,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&amp;&amp;%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" title="字符串 &amp;&amp; 输入输出">
+                      <a href="/2024/12/20/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/" title="python语法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">字符串 &amp;&amp; 输入输出</span>
+                        <span class="hidden-mobile">python语法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/" title="python代码">
+                        <span class="hidden-mobile">python代码</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -443,6 +469,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -635,6 +667,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

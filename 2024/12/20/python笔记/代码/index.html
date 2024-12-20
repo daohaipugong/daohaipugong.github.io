@@ -19,22 +19,23 @@
   <meta name="author" content="pugong">
   <meta name="keywords" content="">
   
-    <meta name="description" content="使用技巧">
+    <meta name="description" content="python代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Typora使用技巧">
-<meta property="og:url" content="https://daohaipugong.github.io/2024/11/25/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:title" content="python代码">
+<meta property="og:url" content="https://daohaipugong.github.io/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="Pugong&#39;s Blog">
-<meta property="og:description" content="使用技巧">
+<meta property="og:description" content="python代码">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-25T10:46:39.846Z">
-<meta property="article:modified_time" content="2024-12-13T06:31:38.966Z">
+<meta property="article:published_time" content="2024-12-20T04:46:17.542Z">
+<meta property="article:modified_time" content="2024-12-20T04:56:31.613Z">
 <meta property="article:author" content="pugong">
-<meta property="article:tag" content="使用文档">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Typora使用技巧 - Pugong&#39;s Blog</title>
+  <title>python代码 - Pugong&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Typora使用技巧"></span>
+            <span id="subtitle" data-typed-text="python代码"></span>
           
         </div>
 
@@ -211,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-25 18:46" pubdate>
-          2024年11月25日 晚上
+        <time datetime="2024-12-20 12:46" pubdate>
+          2024年12月20日 下午
         </time>
       </span>
     
@@ -223,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          170 字
+          110 字
         
       </span>
     
@@ -234,7 +235,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -271,12 +272,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Typora使用技巧</h1>
+            <h1 id="seo-header">python代码</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年12月13日 下午
+                    本文最后更新于 2024年12月20日 下午
                   
                 
               </p>
@@ -284,18 +285,12 @@
             
               <div class="markdown-body">
                 
-                <p>使用技巧</p>
+                <p>python代码</p>
 <span id="more"></span>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal, getcontext<br>getcontext().prec = <span class="hljs-number">100</span> <br>pi=Decimal(<span class="hljs-string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)<br>a=b=mi=<span class="hljs-number">1000000000000000000</span><br>n=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>());<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    l=<span class="hljs-built_in">input</span>().split()<br>    P,A=Decimal(l[<span class="hljs-number">0</span>]),Decimal(l[<span class="hljs-number">1</span>])<br>    t=<span class="hljs-built_in">abs</span>(P/A-pi)<br>    <span class="hljs-keyword">if</span>(t&lt;mi <span class="hljs-keyword">or</span> (t==mi <span class="hljs-keyword">and</span> P&lt;a)):<br>        mi=t; a=P; b=A;<br><span class="hljs-built_in">print</span>(a,b)<br></code></pre></td></tr></table></figure>
 
-<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
-<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp">      _______<br>     <span class="hljs-comment">//  ||\ \</span><br><span class="hljs-comment"> ___//___||_\ \___</span><br> )  _          _    \<br> |_/ \________/ \___|<br>___\_/________\_/______<br></code></pre></td></tr></table></figure>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal, getcontext<br>getcontext().prec = <span class="hljs-number">25</span><br>pi=Decimal(<span class="hljs-string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)<br>a=b=mi=<span class="hljs-number">1000000000000000000</span><br><span class="hljs-built_in">input</span> = sys.stdin.read<br>date=<span class="hljs-built_in">input</span>().split()<br>n=<span class="hljs-built_in">int</span>(date[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    P=Decimal(date[i*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>])<br>    A=Decimal(date[i*<span class="hljs-number">2</span>+<span class="hljs-number">2</span>])<br>    t=<span class="hljs-built_in">abs</span>(P/A-pi)<br>    <span class="hljs-keyword">if</span>(t&lt;mi <span class="hljs-keyword">or</span> (t==mi <span class="hljs-keyword">and</span> P&lt;a)):<br>        mi=t; a=P; b=A;<br><span class="hljs-built_in">print</span>(a,b)<br></code></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// vector不能用memset()</span><br>vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(m<span class="hljs-number">+3</span>));<br>vector&lt;vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&gt; <span class="hljs-built_in">a</span>(n<span class="hljs-number">+3</span>,vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;(m<span class="hljs-number">+3</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(h<span class="hljs-number">+3</span>)));<br><span class="hljs-keyword">auto</span> check=[&amp;](<span class="hljs-type">int</span> x)&#123;<br>    <span class="hljs-type">int</span> pre=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)&#123;<br>            <span class="hljs-keyword">if</span>(a[i][j]&lt;=x)&#123;<br>                <span class="hljs-keyword">if</span>(j&lt;pre) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                pre=j;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;array&lt;<span class="hljs-type">int</span>,3&gt;&gt; que;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -314,7 +309,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/c-%E6%9D%BF%E5%AD%90/" class="category-chain-item">c++板子</a>
+  <a href="/categories/python%E7%AC%94%E8%AE%B0/" class="category-chain-item">python笔记</a>
   
   
 
@@ -329,7 +324,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" class="print-no-link">#使用文档</a>
+        <a href="/tags/python/" class="print-no-link">#python</a>
+      
+        <a href="/tags/%E8%AF%AD%E6%B3%95/" class="print-no-link">#语法</a>
       
     </div>
   
@@ -341,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Typora使用技巧</div>
-      <div>https://daohaipugong.github.io/2024/11/25/c++板子/Typora使用技巧/</div>
+      <div>python代码</div>
+      <div>https://daohaipugong.github.io/2024/12/20/python笔记/代码/</div>
     </div>
     <div class="license-meta">
       
@@ -354,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月25日</div>
+          <div>2024年12月20日</div>
         </div>
       
       
@@ -386,9 +383,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" title="计算几何">
+                      <a href="/2024/12/20/python%E7%AC%94%E8%AE%B0/%E5%B8%B8%E7%94%A8%E5%BA%93/" title="python常用库">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算几何</span>
+                        <span class="hidden-mobile">python常用库</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +393,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/STL%20&amp;%20%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%B9%E5%99%A8/" title="STL &amp; 各种函数、容器">
-                        <span class="hidden-mobile">STL &amp; 各种函数、容器</span>
+                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">
+                        <span class="hidden-mobile">数据结构</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
