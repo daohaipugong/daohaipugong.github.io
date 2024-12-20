@@ -19,23 +19,23 @@
   <meta name="author" content="pugong">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算几何基本模板（二维）">
+    <meta name="description" content="字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算几何">
-<meta property="og:url" content="http://example.com/2024/11/25/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/index.html">
+<meta property="og:title" content="字符串 &amp; 输入输出">
+<meta property="og:url" content="https://daohaipugong.github.io/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/index.html">
 <meta property="og:site_name" content="Pugong&#39;s Blog">
-<meta property="og:description" content="计算几何基本模板（二维）">
+<meta property="og:description" content="字符串">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-25T10:46:39.847Z">
-<meta property="article:modified_time" content="2024-12-13T06:31:10.144Z">
+<meta property="article:published_time" content="2024-11-25T10:46:17.048Z">
+<meta property="article:modified_time" content="2024-12-13T06:31:27.399Z">
 <meta property="article:author" content="pugong">
 <meta property="article:tag" content="算法">
-<meta property="article:tag" content="计算几何">
+<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>计算几何 - Pugong&#39;s Blog</title>
+  <title>字符串 &amp; 输入输出 - Pugong&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"daohaipugong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="计算几何"></span>
+            <span id="subtitle" data-typed-text="字符串 &amp; 输入输出"></span>
           
         </div>
 
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          669 字
+          518 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -272,7 +272,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">计算几何</h1>
+            <h1 id="seo-header">字符串 &amp; 输入输出</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
@@ -285,22 +285,50 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/oneway10101/p/17642080.html#%E6%B1%82%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AFpolygon_area">计算几何基本模板（二维）</a></p>
+                <p>字符串</p>
 <span id="more"></span>
 
-<p><strong>直线方向向量</strong></p>
-<p>对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。</p>
-<p>设一般方程: $A x+B y+C&#x3D;0$<br>写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$<br>那么它的斜率 $k&#x3D;-\frac{A}{B}$<br>过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$<br>取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。</p>
-<p><strong>两直线交点</strong></p>
-<p>直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$<br>直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$</p>
-<p>两条直线 $l_1$ 和 $l_2$ 的交点是：<br>$$<br>\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2} \right)<br>$$</p>
-<p>注意：如果 $A_2B_1 - A_1B_2 &#x3D; 0$，则方程组无解（平行且不重合）或有无穷多解（重合）。</p>
-<p><strong>直线一般式</strong></p>
-<p>$fs(x)$ 防止输出 $-0.00$ 。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-6</span>;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> fs(x) (abs(x) &lt; eps) ? 0 : (x)</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> node&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x == b.x &amp;&amp; y == b.y;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br>&#125;;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Line</span> &#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, b, c;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a ? (b == l.b ? c &lt; l.c : b &lt; l.b) : (a &lt; l.a);<br>	&#125;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> Line&amp; l)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> a == l.a &amp;&amp; b == l.b &amp;&amp; c == l.c;<br>	&#125;<br><br>	<span class="hljs-comment">// 直线是否过点A</span><br>	<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">through</span><span class="hljs-params">(node A)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> a * A.x + b * A.y + c == <span class="hljs-number">0</span>;<br>	&#125;<br>&#125;;<br><br><span class="hljs-comment">// l1,l2是否相交</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">intersect</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> !(l<span class="hljs-number">1.</span>a * l<span class="hljs-number">2.</span>b == l<span class="hljs-number">1.</span>b * l<span class="hljs-number">2.</span>a);<br>&#125;<br><br><span class="hljs-comment">// l1,l2交点</span><br><span class="hljs-function">Point <span class="hljs-title">intersection</span><span class="hljs-params">(Line l1, Line l2)</span> </span>&#123;<br>	<span class="hljs-type">double</span> A1 = l<span class="hljs-number">1.</span>a, B1 = l<span class="hljs-number">1.</span>b, C1 = l<span class="hljs-number">1.</span>c, A2 = l<span class="hljs-number">2.</span>a, B2 = l<span class="hljs-number">2.</span>b, C2 = l<span class="hljs-number">2.</span>c;<br>	<span class="hljs-keyword">return</span> &#123; (B1 * C2 - B2 * C1) / (A1 * B2 - A2 * B1),(A1 * C2 - A2 * C1) / (A2 * B1 - A1 * B2) &#125;;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">gcd</span><span class="hljs-params">(<span class="hljs-type">long</span> <span class="hljs-type">long</span> a, <span class="hljs-type">long</span> <span class="hljs-type">long</span> b)</span> </span>&#123;<br>	<span class="hljs-keyword">if</span> (!b) <span class="hljs-keyword">return</span> a;<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">gcd</span>(b, a % b);<br>&#125;<br><br><span class="hljs-comment">// x1,x2不能相等</span><br><span class="hljs-function">Line <span class="hljs-title">make_line</span><span class="hljs-params">(node x1, node x2)</span> </span>&#123;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> a = x<span class="hljs-number">1.</span>y - x<span class="hljs-number">2.</span>y;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> b = x<span class="hljs-number">2.</span>x - x<span class="hljs-number">1.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> c = x<span class="hljs-number">1.</span>x * x<span class="hljs-number">2.</span>y - x<span class="hljs-number">1.</span>y * x<span class="hljs-number">2.</span>x;<br>	<span class="hljs-type">long</span> <span class="hljs-type">long</span> g = <span class="hljs-built_in">gcd</span>(a, <span class="hljs-built_in">gcd</span>(b, c));<br>	a /= g, b /= g, c /= g;<br>	<span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>		a = -a, b = -b, c = -c;<br>	&#125;<br>	<span class="hljs-keyword">return</span> Line&#123; a,b,c &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><p><code>scanf</code> 读字符时会读入空格、换行</p>
+<p><code>scanf</code> 读字符串时不会读入空格、换行</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">char</span> c,cc;<br><span class="hljs-type">int</span> x;<br>cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%c%c&quot;</span>,&amp;x,&amp;c,&amp;cc);<br>cout&lt;&lt;c&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;cc;<br></code></pre></td></tr></table></figure>
 
-<p><strong>凸包</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">double</span> Pi = <span class="hljs-number">3.141592653589793</span>;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> &#123;<br>	<span class="hljs-type">double</span> x, y;<br><br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x != b.x ? x &lt; b.x : y &lt; b.y;<br>	&#125;<br><br>	Point <span class="hljs-keyword">operator</span>+(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x + b.x,y + b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 向量</span><br>	Point <span class="hljs-keyword">operator</span>-(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> &#123; x - b.x,y - b.y &#125;;<br>	&#125;<br><br>    <span class="hljs-comment">// 点积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>*(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.x + y * b.y;<br>	&#125;<br><br>    <span class="hljs-comment">// 叉积</span><br>	<span class="hljs-type">double</span> <span class="hljs-keyword">operator</span>^(<span class="hljs-type">const</span> Point&amp; b)<span class="hljs-type">const</span> &#123;<br>		<span class="hljs-keyword">return</span> x * b.y - y * b.x;<br>	&#125;<br><br>    <span class="hljs-comment">// 两点距离</span><br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">dis</span><span class="hljs-params">(Point b)</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-built_in">hypot</span>(x - b.x, y - b.y);<br>	&#125;<br><br>    <span class="hljs-comment">// 绕p逆时针转angle弧度</span><br>	<span class="hljs-function">Point <span class="hljs-title">rotate</span><span class="hljs-params">(Point p, <span class="hljs-type">double</span> angle)</span> </span>&#123;<br>		Point v = (*<span class="hljs-keyword">this</span>) - p;<br>		<span class="hljs-type">double</span> c = <span class="hljs-built_in">cos</span>(angle), s = <span class="hljs-built_in">sin</span>(angle);<br>		<span class="hljs-keyword">return</span> &#123; p.x + v.x * c - v.y * s,p.y + v.y * c + v.x * s &#125;;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">is_right</span><span class="hljs-params">(Point a, Point b, Point c)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> ((c - a) ^ (b - a)) &gt;= <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-built_in">sort</span>(p + <span class="hljs-number">1</span>, p + <span class="hljs-number">1</span> + size);<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i++) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br><span class="hljs-type">int</span> len = tt;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = size; i &gt;= <span class="hljs-number">1</span>; i--) &#123;<br>	<span class="hljs-keyword">while</span> (tt &gt;= len + <span class="hljs-number">1</span> &amp;&amp; <span class="hljs-built_in">is_right</span>(stk[tt - <span class="hljs-number">1</span>], stk[tt], p[i])) tt--;<br>	stk[++tt] = p[i];<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>输入</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">1</span><br><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>输出</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p><code>cin</code> 不会读入开始的换行、空格，遇到空格、换行停止</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//char s[1000];</span><br><span class="hljs-comment">//char s;</span><br>string s;<br>cin&gt;&gt;s;<br></code></pre></td></tr></table></figure>
+
+<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h3><p><code>getchar</code> 会读入换行和空格，但是不能与IOS同时使用。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">char</span> c=<span class="hljs-built_in">getchar</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="ignore"><a href="#ignore" class="headerlink" title="ignore()"></a>ignore()</h3><p>从输入流中移除（忽略）下一个字符</p>
+<p>如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 <code>cin.ignore()</code> 函数执行终止；否则，它继续等待。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cin.<span class="hljs-built_in">ignore</span>();<br>cin.<span class="hljs-built_in">ignore</span>(a,ch)<br></code></pre></td></tr></table></figure>
+
+<h3 id="getline"><a href="#getline" class="headerlink" title="getline()"></a>getline()</h3><p>读入一行字符串，遇到换行停止。使用前一般先清除缓存区换行符。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s;<br><span class="hljs-built_in">getline</span>(cin,s);<br></code></pre></td></tr></table></figure>
+
+<p><strong>清除缓存区换行方法：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cin.<span class="hljs-built_in">ignore</span>();<br><span class="hljs-built_in">getchar</span>();      <span class="hljs-comment">//不能与IOS同时使用。</span><br><span class="hljs-built_in">getline</span>(cin,s);<br></code></pre></td></tr></table></figure>
+
+<h3 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h3><p><code>stringstream</code> 可以逐个读取单词（或更准确地说，是由空白字符分隔的字符串序列）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s;<br><span class="hljs-built_in">getline</span>(cin,s);<br><span class="hljs-function">stringstream <span class="hljs-title">ss</span><span class="hljs-params">(s)</span></span>;   <span class="hljs-comment">//将ss初始化为s</span><br>string str;<br><span class="hljs-keyword">while</span>(ss&gt;&gt;str)&#123;       <span class="hljs-comment">//逐个读取单词，读取到str中</span><br>    cout&lt;&lt;str&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cppp">八进制: %o<br>十六进制: %x<br></code></pre></td></tr></table></figure>
+
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/fdqw_sph/article/details/54233971">c++中的string常用函数用法总结_c++string函数-CSDN博客</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s</span><span class="hljs-params">(num,c)</span> <span class="hljs-comment">//生成一个字符串，包含num个c字符</span></span><br><span class="hljs-function">string <span class="hljs-title">s</span><span class="hljs-params">(str,\stridx,\strlen)</span> <span class="hljs-comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="插入-删除字符-串"><a href="#插入-删除字符-串" class="headerlink" title="插入&#x2F;删除字符 (串)"></a>插入&#x2F;删除字符 (串)</h3><p><code>insert (index, count, ch)</code> 和 <code>insert (index, str)</code> 是比较常见的插入函数。它们分别表示在 <code>index</code> 处连续插入 <code>count</code> 次字符串 $ch$ 和插入字符串 $str$ 。时间复杂度 $O(|s|-index+count)$ 。</p>
+<p><code>erase(index, count)</code> 函数将字符串 <code>index</code> 位置开始 (含) 的 <code>count</code> 个字符删除（若不传参给 <code>count</code> 则表示删去 <code>index</code> 位置及以后的所有字符）。</p>
+<h2 id="字符串整数互换"><a href="#字符串整数互换" class="headerlink" title="字符串整数互换"></a>字符串整数互换</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp">std::string str = <span class="hljs-string">&quot;123&quot;</span>;<br><span class="hljs-type">int</span> num;<br>num = std::<span class="hljs-built_in">stoi</span>(str)   <span class="hljs-comment">// string -&gt; int</span><br>num = std::<span class="hljs-built_in">stoll</span>(str)   <span class="hljs-comment">// string -&gt; long long</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;456&quot;</span>;<br><span class="hljs-type">int</span> num = std::<span class="hljs-built_in">atoi</span>(str);   <span class="hljs-comment">// char -&gt; int</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> num = <span class="hljs-number">123</span>;<br>std::string str = <span class="hljs-built_in">to_string</span>(num); <span class="hljs-comment">// int -&gt; string</span><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -337,7 +365,7 @@
       
         <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" class="print-no-link">#计算几何</a>
+        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="print-no-link">#字符串</a>
       
     </div>
   
@@ -349,8 +377,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>计算几何</div>
-      <div>http://example.com/2024/11/25/计算几何/</div>
+      <div>字符串 &amp; 输入输出</div>
+      <div>https://daohaipugong.github.io/2024/11/25/c++板子/字符串 &amp; 输入输出/</div>
     </div>
     <div class="license-meta">
       
@@ -394,9 +422,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">
+                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E6%9D%82%E9%A1%B9/" title="杂项">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构</span>
+                        <span class="hidden-mobile">杂项</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -404,8 +432,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/25/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="Typora使用技巧">
-                        <span class="hidden-mobile">Typora使用技巧</span>
+                      <a href="/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E5%9B%BE%E8%AE%BA/" title="图论">
+                        <span class="hidden-mobile">图论</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
