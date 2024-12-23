@@ -665,6 +665,10 @@
 <p><img src="https://pic3.zhimg.com/80/v2-1224b08274913efa2cd7dbb31f8e6262_720w.webp" alt="img"></p>
 <p>每个 $\mathrm{B}$ 都有 $\mathrm{n}+1$ 个 $+1$ 以及 $\mathrm{n}-1$ 个 $-1$ ，因此 $\mathrm{B}$ 的数量为 $C_{2 n}^{n+1}$ ，相当于在长度为 $2 \mathrm{n}$ 的序列中找到 $n+1$ 个位置存放 $+1$ 。相应的，非法序列的数量也就等于 $C_{2 n}^{n+1}$ 。</p>
 <p>出栈序列的总数量共有 $C_{2 n}^n$ ，因此，合法的出栈序列的数量为 $C_{2 n}^n-C_{2 n}^{n+1}&#x3D;\frac{C_{2 n}^n}{n+1}$ 。<br>此时我们就得到了卡特兰数的通项 $\frac{C_{2 n}^n}{n+1}$ ，至于具体如何计算结果将会在后面进行介绍。</p>
+<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><p><a href="https://www.cnblogs.com/cjoierShiina-Mashiro/p/11385287.html">https://www.cnblogs.com/cjoierShiina-Mashiro/p/11385287.html</a></p>
+<p>$F&#x3D;0,1,1,2,3\ \ …$</p>
+<p>由皮亚诺定理可知，模数为 $k$ 的循环节长度不会超过 $6k$ 。</p>
+<p> $gcd(F_n,F_m)&#x3D;F_{gcd(n,m)}$ ，如果 $F_i$ 能被 $k$ 整除，那么对于每一个 $j$ ， $F_{i⋅j}$ 也能被 $k$ 整除。</p>
 <h2 id="质数"><a href="#质数" class="headerlink" title="质数"></a>质数</h2><ul>
 <li><p>相邻的两个正整数 一定互质</p>
 </li>
