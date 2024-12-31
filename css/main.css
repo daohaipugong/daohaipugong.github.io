@@ -1249,7 +1249,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #26fe34;
+    background: #f54fe7;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2890,7 +2890,7 @@ header.header {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 ::selection {
-  background-color: #0081ea;
+  background-color: #0094f6;
   color: #fff;
 }
 .btn {
@@ -2902,6 +2902,19 @@ header.header {
   border-color: #49b1f5;
   color: #fff;
   background: #49b1f5;
+}
+.posts-expand .post-title-link::before {
+  background-color: #49b1f5;
+}
+.headband {
+  height: 3px;
+  background: #49b1f5;
+}
+.site-brand-container {
+  background-color: #65c1ff;
+}
+.column {
+  font-size: 16px; /* 保持侧边栏字体大小不变 */
 }
 code {
   padding: 2px 4px;
