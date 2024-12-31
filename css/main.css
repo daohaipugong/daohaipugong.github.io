@@ -1249,7 +1249,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #aa7dff;
+    background: #26fe34;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2031,6 +2031,18 @@ pre code {
   position: absolute;
   top: 0;
   width: 100%;
+}
+文章内链接文本样式,
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+文章内链接文本样式:hover,
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
 }
 .post-gallery {
   display: flex;
@@ -2876,6 +2888,20 @@ header.header {
 }
 .post-block {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
+}
+::selection {
+  background-color: #0081ea;
+  color: #fff;
+}
+.btn {
+  color: #49b1f5;
+  background: #fff;
+  border: 2px solid #49b1f5;
+}
+.btn:hover {
+  border-color: #49b1f5;
+  color: #fff;
+  background: #49b1f5;
 }
 code {
   padding: 2px 4px;
