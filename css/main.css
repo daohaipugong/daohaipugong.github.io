@@ -1249,7 +1249,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #f54fe7;
+    background: #2fffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2894,17 +2894,17 @@ header.header {
   color: #fff;
 }
 .btn {
-  color: #49b1f5;
+  color: #fc6423;
   background: #fff;
-  border: 2px solid #49b1f5;
+  border: 2px solid #fc6423;
 }
 .btn:hover {
-  border-color: #49b1f5;
+  border-color: #fc6423;
   color: #fff;
-  background: #49b1f5;
+  background: #fc6423;
 }
 .posts-expand .post-title-link::before {
-  background-color: #49b1f5;
+  background-color: #fc6423;
 }
 .headband {
   height: 3px;
