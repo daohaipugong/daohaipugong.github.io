@@ -24,6 +24,30 @@
       </categories>
   </entry>
   <entry>
+    <title>Typora使用技巧和c++代码</title>
+    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>使用技巧</p>
+<span id="more"></span>
+
+<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
+<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c++板子</category>
+      </categories>
+      <tags>
+        <tag>使用文档</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>STL &amp;&amp; 各种函数、容器</title>
     <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/STL%20&amp;&amp;%20%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p>Fragmented knowledge points+STL</p>
@@ -144,9 +168,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
+        <tag>c++</tag>
         <tag>STL</tag>
         <tag>算法</tag>
-        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -249,33 +273,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
+        <tag>c++</tag>
         <tag>算法</tag>
-        <tag>c++</tag>
         <tag>dp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora使用技巧和c++代码</title>
-    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>使用技巧</p>
-<span id="more"></span>
-
-<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
-<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>c++板子</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>使用文档</tag>
       </tags>
   </entry>
   <entry>
@@ -491,6 +491,64 @@
       </tags>
   </entry>
   <entry>
+    <title>字符串 &amp;&amp; 输入输出</title>
+    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&amp;&amp;%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<p>字符串</p>
+<span id="more"></span>
+
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><p><code>scanf</code> 读字符时会读入空格、换行</p>
+<p><code>scanf</code> 读字符串时不会读入空格、换行</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c,cc;</span><br><span class="line"><span class="type">int</span> x;</span><br><span class="line">cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%c%c&quot;</span>,&amp;x,&amp;c,&amp;cc);</span><br><span class="line">cout&lt;&lt;c&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;cc;</span><br></pre></td></tr></table></figure>
+
+<p><strong>输入</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>输出</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p><code>cin</code> 不会读入开始的换行、空格，遇到空格、换行停止</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//char s[1000];</span></span><br><span class="line"><span class="comment">//char s;</span></span><br><span class="line">string s;</span><br><span class="line">cin&gt;&gt;s;</span><br></pre></td></tr></table></figure>
+
+<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h3><p><code>getchar</code> 会读入换行和空格，但是不能与IOS同时使用。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="ignore"><a href="#ignore" class="headerlink" title="ignore()"></a>ignore()</h3><p>从输入流中移除（忽略）下一个字符</p>
+<p>如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 <code>cin.ignore()</code> 函数执行终止；否则，它继续等待。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>(a,ch)</span><br></pre></td></tr></table></figure>
+
+<h3 id="getline"><a href="#getline" class="headerlink" title="getline()"></a>getline()</h3><p>读入一行字符串，遇到换行停止。使用前一般先清除缓存区换行符。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
+
+<p><strong>清除缓存区换行方法：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getchar</span>();      <span class="comment">//不能与IOS同时使用。</span></span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
+
+<h3 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h3><p><code>stringstream</code> 可以逐个读取单词（或更准确地说，是由空白字符分隔的字符串序列）。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br><span class="line"><span class="function">stringstream <span class="title">ss</span><span class="params">(s)</span></span>;   <span class="comment">//将ss初始化为s</span></span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;str)&#123;       <span class="comment">//逐个读取单词，读取到str中</span></span><br><span class="line">    cout&lt;&lt;str&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">八进制: %o</span><br><span class="line">十六进制: %x</span><br></pre></td></tr></table></figure>
+
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p><a href="https://blog.csdn.net/fdqw_sph/article/details/54233971">c++中的string常用函数用法总结_c++string函数-CSDN博客</a></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">s</span><span class="params">(num,c)</span> <span class="comment">//生成一个字符串，包含num个c字符</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(str,\stridx,\strlen)</span> <span class="comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="插入-删除字符-串"><a href="#插入-删除字符-串" class="headerlink" title="插入&#x2F;删除字符 (串)"></a>插入&#x2F;删除字符 (串)</h3><p><code>insert (index, count, ch)</code> 和 <code>insert (index, str)</code> 是比较常见的插入函数。它们分别表示在 <code>index</code> 处连续插入 <code>count</code> 次字符串 $ch$ 和插入字符串 $str$ 。时间复杂度 $O(|s|-index+count)$ 。</p>
+<p><code>erase(index, count)</code> 函数将字符串 <code>index</code> 位置开始 (含) 的 <code>count</code> 个字符删除（若不传参给 <code>count</code> 则表示删去 <code>index</code> 位置及以后的所有字符）。</p>
+<h2 id="字符串整数互换"><a href="#字符串整数互换" class="headerlink" title="字符串整数互换"></a>字符串整数互换</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string str = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="type">int</span> num;</span><br><span class="line">num = std::<span class="built_in">stoi</span>(str)   <span class="comment">// string -&gt; int</span></span><br><span class="line">num = std::<span class="built_in">stoll</span>(str)   <span class="comment">// string -&gt; long long</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;456&quot;</span>;</span><br><span class="line"><span class="type">int</span> num = std::<span class="built_in">atoi</span>(str);   <span class="comment">// char -&gt; int</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">std::string str = <span class="built_in">to_string</span>(num); <span class="comment">// int -&gt; string</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c++板子</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>算法</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构</title>
     <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<p>数据结构</p>
@@ -580,67 +638,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字符串 &amp;&amp; 输入输出</title>
-    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2%20&amp;&amp;%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
-    <content><![CDATA[<p>字符串</p>
-<span id="more"></span>
-
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><p><code>scanf</code> 读字符时会读入空格、换行</p>
-<p><code>scanf</code> 读字符串时不会读入空格、换行</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c,cc;</span><br><span class="line"><span class="type">int</span> x;</span><br><span class="line">cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%c%c&quot;</span>,&amp;x,&amp;c,&amp;cc);</span><br><span class="line">cout&lt;&lt;c&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;cc;</span><br></pre></td></tr></table></figure>
-
-<p><strong>输入</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>输出</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="cin"><a href="#cin" class="headerlink" title="cin"></a>cin</h3><p><code>cin</code> 不会读入开始的换行、空格，遇到空格、换行停止</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//char s[1000];</span></span><br><span class="line"><span class="comment">//char s;</span></span><br><span class="line">string s;</span><br><span class="line">cin&gt;&gt;s;</span><br></pre></td></tr></table></figure>
-
-<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h3><p><code>getchar</code> 会读入换行和空格，但是不能与IOS同时使用。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> c=<span class="built_in">getchar</span>();</span><br></pre></td></tr></table></figure>
-
-<h3 id="ignore"><a href="#ignore" class="headerlink" title="ignore()"></a>ignore()</h3><p>从输入流中移除（忽略）下一个字符</p>
-<p>如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 <code>cin.ignore()</code> 函数执行终止；否则，它继续等待。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>(a,ch)</span><br></pre></td></tr></table></figure>
-
-<h3 id="getline"><a href="#getline" class="headerlink" title="getline()"></a>getline()</h3><p>读入一行字符串，遇到换行停止。使用前一般先清除缓存区换行符。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
-
-<p><strong>清除缓存区换行方法：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getchar</span>();      <span class="comment">//不能与IOS同时使用。</span></span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br></pre></td></tr></table></figure>
-
-<h3 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h3><p><code>stringstream</code> 可以逐个读取单词（或更准确地说，是由空白字符分隔的字符串序列）。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line"><span class="built_in">getline</span>(cin,s);</span><br><span class="line"><span class="function">stringstream <span class="title">ss</span><span class="params">(s)</span></span>;   <span class="comment">//将ss初始化为s</span></span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;str)&#123;       <span class="comment">//逐个读取单词，读取到str中</span></span><br><span class="line">    cout&lt;&lt;str&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">八进制: %o</span><br><span class="line">十六进制: %x</span><br></pre></td></tr></table></figure>
-
-<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p><a href="https://blog.csdn.net/fdqw_sph/article/details/54233971">c++中的string常用函数用法总结_c++string函数-CSDN博客</a></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">s</span><span class="params">(num,c)</span> <span class="comment">//生成一个字符串，包含num个c字符</span></span></span><br><span class="line"><span class="function">string <span class="title">s</span><span class="params">(str,\stridx,\strlen)</span> <span class="comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="插入-删除字符-串"><a href="#插入-删除字符-串" class="headerlink" title="插入&#x2F;删除字符 (串)"></a>插入&#x2F;删除字符 (串)</h3><p><code>insert (index, count, ch)</code> 和 <code>insert (index, str)</code> 是比较常见的插入函数。它们分别表示在 <code>index</code> 处连续插入 <code>count</code> 次字符串 $ch$ 和插入字符串 $str$ 。时间复杂度 $O(|s|-index+count)$ 。</p>
-<p><code>erase(index, count)</code> 函数将字符串 <code>index</code> 位置开始 (含) 的 <code>count</code> 个字符删除（若不传参给 <code>count</code> 则表示删去 <code>index</code> 位置及以后的所有字符）。</p>
-<h2 id="字符串整数互换"><a href="#字符串整数互换" class="headerlink" title="字符串整数互换"></a>字符串整数互换</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string str = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="type">int</span> num;</span><br><span class="line">num = std::<span class="built_in">stoi</span>(str)   <span class="comment">// string -&gt; int</span></span><br><span class="line">num = std::<span class="built_in">stoll</span>(str)   <span class="comment">// string -&gt; long long</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;456&quot;</span>;</span><br><span class="line"><span class="type">int</span> num = std::<span class="built_in">atoi</span>(str);   <span class="comment">// char -&gt; int</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">std::string str = <span class="built_in">to_string</span>(num); <span class="comment">// int -&gt; string</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>c++板子</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>c++</tag>
-        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -754,60 +754,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python代码</title>
-    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>python代码</p>
-<span id="more"></span>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python语法</title>
-    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>python语法</p>
-<span id="more"></span>
-
-<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
-<ul>
-<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
-<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
-</ul>
-<p>下面是一个简单的示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)	<span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
-
-<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
-
-<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
-<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
-<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -877,8 +826,8 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>杂项</tag>
       </tags>
   </entry>
@@ -907,9 +856,27 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>计算几何</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python代码</title>
+    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>python代码</p>
+<span id="more"></span>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -939,6 +906,39 @@
 
 <h2 id="heapq"><a href="#heapq" class="headerlink" title="heapq"></a>heapq</h2><p><a href="https://blog.csdn.net/chandelierds/article/details/91357784">Python中heapq模块浅析_heapq.heappush-CSDN博客</a></p>
 <h2 id="bisect（二分）"><a href="#bisect（二分）" class="headerlink" title="bisect（二分）"></a>bisect（二分）</h2><p><a href="https://www.cnblogs.com/hider/p/14711550.html">https://www.cnblogs.com/hider/p/14711550.html</a></p>
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python语法</title>
+    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>python语法</p>
+<span id="more"></span>
+
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
+<ul>
+<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
+<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
+</ul>
+<p>下面是一个简单的示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)	<span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
+
+<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
+<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
 ]]></content>
       <categories>
         <category>python笔记</category>
