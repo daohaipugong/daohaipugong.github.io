@@ -24,6 +24,117 @@
       </categories>
   </entry>
   <entry>
+    <title>python代码</title>
+    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>python代码</p>
+<span id="more"></span>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python语法</title>
+    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>python语法</p>
+<span id="more"></span>
+
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
+<ul>
+<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
+<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
+</ul>
+<p>下面是一个简单的示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)	<span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
+
+<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
+<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python常用库</title>
+    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E5%B8%B8%E7%94%A8%E5%BA%93/</url>
+    <content><![CDATA[<p>python常用库</p>
+<span id="more"></span>
+
+<h2 id="decimal"><a href="#decimal" class="headerlink" title="decimal"></a>decimal</h2><p><a href="https://blog.csdn.net/qq_39147299/article/details/124200896">【python】Decimal的使用</a></p>
+<p>用于浮点数和较大的数据进行运算。</p>
+<h3 id="1-精度"><a href="#1-精度" class="headerlink" title="1.精度"></a>1.精度</h3><p>decimal的精度默认是28位，可以自定义，通过getcontext获取线程上下文，然后修改prec属性即可</p>
+<p>prec代表有效数字</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(getcontext().prec)  <span class="comment"># 计算精度，默认是28  </span></span><br><span class="line">getcontext().prec = <span class="number">100</span>  <span class="comment"># 可修改</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># from decimal import Decimal,Context,setcontext</span></span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> *</span><br><span class="line">setcontext(Context(prec=<span class="number">10000000</span>,Emax=<span class="number">3000000</span>,Emin=<span class="number">0</span>))   <span class="comment">#有效数字，最大指数，最小指数</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Decimal"><a href="#2-Decimal" class="headerlink" title="2.Decimal"></a>2.Decimal</h3><p>通过实例化Decimal对象时传入value参数把其他的数据类型转换成Decimal类型。注意，尽量传入整数和字符串，如果传入float会导致结果不准确（float本身就存在精度问题）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = Decimal(<span class="string">&quot;5632569878.6514126&quot;</span>)  <span class="comment"># 字符串</span></span><br><span class="line">c = Decimal(<span class="number">63</span>)  <span class="comment"># 整数</span></span><br><span class="line">d = Decimal.from_float(<span class="number">6.325</span>)  <span class="comment"># Decimal(6.32500000000000017763568394002504646778106689453125), 不准确</span></span><br></pre></td></tr></table></figure>
+
+<p>Decimal类型也可以像python基本数据类型那样进行加减乘除等运算，运算完后还是Decimal类型。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = Decimal(<span class="string">&quot;8.651&quot;</span>)  <span class="comment"># Decimal(8.651)</span></span><br><span class="line">b = Decimal(<span class="string">&quot;7&quot;</span>)  <span class="comment"># Decimal(7)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a // b)  <span class="comment"># Decimal(1)</span></span><br><span class="line"><span class="built_in">print</span>(a ** <span class="number">2</span>)  <span class="comment"># Decimal(74.839801)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="sys"><a href="#sys" class="headerlink" title="sys"></a>sys</h2><p><code>sys.stdin.read()</code> 的使用是用来从标准输入（stdin）读取所有的数据，直到输入结束（EOF，即文件结束符）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是n，m，则date[i*2+0]，date[i*2+1]</span></span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    a=<span class="built_in">int</span>(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    b=<span class="built_in">int</span>(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="heapq"><a href="#heapq" class="headerlink" title="heapq"></a>heapq</h2><p><a href="https://blog.csdn.net/chandelierds/article/details/91357784">Python中heapq模块浅析_heapq.heappush-CSDN博客</a></p>
+<h2 id="bisect（二分）"><a href="#bisect（二分）" class="headerlink" title="bisect（二分）"></a>bisect（二分）</h2><p><a href="https://www.cnblogs.com/hider/p/14711550.html">https://www.cnblogs.com/hider/p/14711550.html</a></p>
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora使用技巧和c++代码</title>
+    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>使用技巧</p>
+<span id="more"></span>
+
+<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
+<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c++板子</category>
+      </categories>
+      <tags>
+        <tag>使用文档</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>STL &amp;&amp; 各种函数、容器</title>
     <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/STL%20&amp;&amp;%20%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p>Fragmented knowledge points+STL</p>
@@ -144,9 +255,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
+        <tag>c++</tag>
         <tag>STL</tag>
         <tag>算法</tag>
-        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -198,7 +309,7 @@
 <p>如果已经计算过，则直接返回已经存储的结果；否则，计算该问题，并将结果存储下来以备将来使用。</p>
 <h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><h4 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h4><p>比如「斐波那契数列」的定义是： $$f(0)&#x3D;0,f(1)&#x3D;1,f(n)&#x3D;f(n−1)+f(n−2)$$</p>
 <p>如果我们使用递归算法求解第 $n$ 个斐波那契数，则对应的递推过程如下：</p>
-<p><img data-src="/../images/001.png"></p>
+<p><img data-src="/../../images/001.png"></p>
 <p>从图中可以看出：如果使用普通递归算法，想要计算 $f(5)$ ，需要先计算 $f(3)$ 和 $f(4)$，而在计算 $f(4)$ 时还需要计算 $f(3)$。这样 $f(3)$ 就进行了多次计算，同理 $f(0)$、$f(1)$、$f(2)$ 都进行了多次计算，从而导致了重复计算问题。时间复杂度为 $O(2^n)$ 。</p>
 <p>而记忆化搜索可以避免重复搜索，大大提高了效率。时间复杂度为 $O(n)$ 。</p>
 <p>「斐波那契数列」的记忆化代码如下：</p>
@@ -249,33 +360,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
+        <tag>c++</tag>
         <tag>算法</tag>
-        <tag>c++</tag>
         <tag>dp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora使用技巧和c++代码</title>
-    <url>/2024/11/25/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>使用技巧</p>
-<span id="more"></span>
-
-<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
-<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>c++板子</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>使用文档</tag>
       </tags>
   </entry>
   <entry>
@@ -331,8 +418,8 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -565,7 +652,7 @@
 
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">(string s, string str)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = s.<span class="built_in">size</span>(), m = str.<span class="built_in">size</span>();</span><br><span class="line">    <span class="type">int</span> ne[m + <span class="number">10</span>];</span><br><span class="line">    ne[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">-1</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; str[j + <span class="number">1</span>] != str[i]) j = ne[j];</span><br><span class="line">        <span class="keyword">if</span> (str[j + <span class="number">1</span>] == str[i]) j++;</span><br><span class="line">        ne[i] = j;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">-1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (j != <span class="number">-1</span> &amp;&amp; s[i] != str[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">        <span class="keyword">if</span> (s[i] == str[j + <span class="number">1</span>]) j++;</span><br><span class="line">        <span class="keyword">if</span> (j == m - <span class="number">1</span>) &#123;</span><br><span class="line">            cout &lt;&lt; i - j &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">            j = ne[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><p><img data-src="/../images/trie1.png" alt="trie1"></p>
+<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><p><img data-src="/../../images/trie1.png" alt="trie1"></p>
 <h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h3 id="普通并查集"><a href="#普通并查集" class="headerlink" title="普通并查集"></a>普通并查集</h3><h4 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h4><p>时间复杂度 $O\left(m \log _{1+\frac{m}{n}} n\right)$（ $m$ 为操作数 ），近似 $O(1)$ 。<a href="https://www.luogu.com/article/x3u368oh">时间复杂度-势能分析浅谈 </a></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">DSU</span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; p;</span><br><span class="line">	<span class="built_in">DSU</span>(<span class="type">int</span> n):<span class="built_in">p</span>(n)&#123;</span><br><span class="line">		<span class="built_in">iota</span>(p.<span class="built_in">begin</span>(),p.<span class="built_in">end</span>(),<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x!=p[x]) <span class="keyword">return</span> p[x]=<span class="built_in">find</span>(p[x]);</span><br><span class="line">		<span class="keyword">return</span> p[x];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">		p[<span class="built_in">find</span>(x)]=<span class="built_in">find</span>(y);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">same</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">find</span>(x)==<span class="built_in">find</span>(y);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -596,7 +683,7 @@
 <p>注意</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">越界  n+10</span><br><span class="line">区间修改，查询操作前先 pushdown</span><br><span class="line">修改之后 pushup</span><br><span class="line">pushdown函数记得把父节点的懒标记清空</span><br></pre></td></tr></table></figure>
 
-<h2 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h2><p><img data-src="/../images/002.png" alt="002"></p>
+<h2 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h2><p><img data-src="/../../images/002.png" alt="002"></p>
 <p>树状数组思想<br>树状数组的本质思想是使用树结构维护”前缀和”，从而把时间复杂度降为 $O(logn)$ 。</p>
 <p>对于一个序列，对其建立如下树形结构：</p>
 <ol>
@@ -642,45 +729,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python常用库</title>
-    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E5%B8%B8%E7%94%A8%E5%BA%93/</url>
-    <content><![CDATA[<p>python常用库</p>
-<span id="more"></span>
-
-<h2 id="decimal"><a href="#decimal" class="headerlink" title="decimal"></a>decimal</h2><p><a href="https://blog.csdn.net/qq_39147299/article/details/124200896">【python】Decimal的使用</a></p>
-<p>用于浮点数和较大的数据进行运算。</p>
-<h3 id="1-精度"><a href="#1-精度" class="headerlink" title="1.精度"></a>1.精度</h3><p>decimal的精度默认是28位，可以自定义，通过getcontext获取线程上下文，然后修改prec属性即可</p>
-<p>prec代表有效数字</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(getcontext().prec)  <span class="comment"># 计算精度，默认是28  </span></span><br><span class="line">getcontext().prec = <span class="number">100</span>  <span class="comment"># 可修改</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># from decimal import Decimal,Context,setcontext</span></span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> *</span><br><span class="line">setcontext(Context(prec=<span class="number">10000000</span>,Emax=<span class="number">3000000</span>,Emin=<span class="number">0</span>))   <span class="comment">#有效数字，最大指数，最小指数</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-Decimal"><a href="#2-Decimal" class="headerlink" title="2.Decimal"></a>2.Decimal</h3><p>通过实例化Decimal对象时传入value参数把其他的数据类型转换成Decimal类型。注意，尽量传入整数和字符串，如果传入float会导致结果不准确（float本身就存在精度问题）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = Decimal(<span class="string">&quot;5632569878.6514126&quot;</span>)  <span class="comment"># 字符串</span></span><br><span class="line">c = Decimal(<span class="number">63</span>)  <span class="comment"># 整数</span></span><br><span class="line">d = Decimal.from_float(<span class="number">6.325</span>)  <span class="comment"># Decimal(6.32500000000000017763568394002504646778106689453125), 不准确</span></span><br></pre></td></tr></table></figure>
-
-<p>Decimal类型也可以像python基本数据类型那样进行加减乘除等运算，运算完后还是Decimal类型。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = Decimal(<span class="string">&quot;8.651&quot;</span>)  <span class="comment"># Decimal(8.651)</span></span><br><span class="line">b = Decimal(<span class="string">&quot;7&quot;</span>)  <span class="comment"># Decimal(7)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a // b)  <span class="comment"># Decimal(1)</span></span><br><span class="line"><span class="built_in">print</span>(a ** <span class="number">2</span>)  <span class="comment"># Decimal(74.839801)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="sys"><a href="#sys" class="headerlink" title="sys"></a>sys</h2><p><code>sys.stdin.read()</code> 的使用是用来从标准输入（stdin）读取所有的数据，直到输入结束（EOF，即文件结束符）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是n，m，则date[i*2+0]，date[i*2+1]</span></span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    a=<span class="built_in">int</span>(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    b=<span class="built_in">int</span>(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
-<h2 id="heapq"><a href="#heapq" class="headerlink" title="heapq"></a>heapq</h2><p><a href="https://blog.csdn.net/chandelierds/article/details/91357784">Python中heapq模块浅析_heapq.heappush-CSDN博客</a></p>
-<h2 id="bisect（二分）"><a href="#bisect（二分）" class="headerlink" title="bisect（二分）"></a>bisect（二分）</h2><p><a href="https://www.cnblogs.com/hider/p/14711550.html">https://www.cnblogs.com/hider/p/14711550.html</a></p>
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -715,7 +766,7 @@
 <li><p>若 $x$ 和 $y$ 互质，那么 $x+y\ (或x-y)$ 和 $x$ 互质，且 $x+y$ 与 $x^n$ 互质 。</p>
 </li>
 <li><p>除了 $11$ 以外的所有的偶数位回文数都不是素数</p>
-<p><img data-src="/../images/0004.png" alt="1"></p>
+<p><img data-src="/../../images/0004.png" alt="1"></p>
 </li>
 </ul>
 <h3 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> primes[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> cnt;</span><br><span class="line"><span class="comment">//埃氏筛</span></span><br><span class="line"><span class="comment">//用质数去筛掉合数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_primes1</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!st[i])&#123;</span><br><span class="line">            primes[++cnt]=i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=i+i;j&lt;=n;j=j+i)&#123;</span><br><span class="line">                st[j]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -794,8 +845,8 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数论</tag>
       </tags>
   </entry>
@@ -870,8 +921,8 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>杂项</tag>
       </tags>
   </entry>
@@ -900,60 +951,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>计算几何</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python代码</title>
-    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>python代码</p>
-<span id="more"></span>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python语法</title>
-    <url>/2024/12/20/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>python语法</p>
-<span id="more"></span>
-
-<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
-<ul>
-<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
-<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
-</ul>
-<p>下面是一个简单的示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)	<span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
-
-<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
-
-<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
-<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
-<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
 </search>
