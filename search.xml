@@ -25,8 +25,32 @@
       </categories>
   </entry>
   <entry>
+    <title>Typora使用技巧和c++代码</title>
+    <url>/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>使用技巧</p>
+<span id="more"></span>
+
+<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
+<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c++板子</category>
+      </categories>
+      <tags>
+        <tag>使用文档</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>STL &amp;&amp; 各种函数、容器</title>
-    <url>/c++%E6%9D%BF%E5%AD%90/STL_and_%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%B9%E5%99%A8/</url>
+    <url>/c++%E6%9D%BF%E5%AD%90/STL-and-%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E5%8F%8A%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p>Fragmented knowledge points+STL</p>
 <span id="more"></span>
 
@@ -156,33 +180,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
+        <tag>c++</tag>
         <tag>STL</tag>
         <tag>算法</tag>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora使用技巧和c++代码</title>
-    <url>/c++%E6%9D%BF%E5%AD%90/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>使用技巧</p>
-<span id="more"></span>
-
-<h2 id="改变字体大小、颜色"><a href="#改变字体大小、颜色" class="headerlink" title="改变字体大小、颜色"></a>改变字体大小、颜色</h2><p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span></p>
-<p><span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:宋体;'>文字</span></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>ctrl+k：添加超链接</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      _______</span><br><span class="line">     <span class="comment">//  ||\ \</span></span><br><span class="line"><span class="comment"> ___//___||_\ \___</span></span><br><span class="line"> )  _          _    \</span><br><span class="line"> |_/ \________/ \___|</span><br><span class="line">___\_/________\_/______</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.latexlive.com/##">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vector不能用memset()</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(m<span class="number">+3</span>));</span><br><span class="line">vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; <span class="built_in">a</span>(n<span class="number">+3</span>,vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(m<span class="number">+3</span>,<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(h<span class="number">+3</span>)));</span><br><span class="line"><span class="keyword">auto</span> check=[&amp;](<span class="type">int</span> x)&#123;</span><br><span class="line">    <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j]&lt;=x)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j&lt;pre) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                pre=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;array&lt;<span class="type">int</span>,3&gt;&gt; que;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;[a,b,c]:que) cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>c++板子</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>使用文档</tag>
       </tags>
   </entry>
   <entry>
@@ -284,8 +284,8 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>dp</tag>
       </tags>
   </entry>
@@ -503,7 +503,7 @@
   </entry>
   <entry>
     <title>字符串 &amp;&amp; 输入输出</title>
-    <url>/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2_and_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <url>/c++%E6%9D%BF%E5%AD%90/%E5%AD%97%E7%AC%A6%E4%B8%B2-and-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<p>字符串</p>
 <span id="more"></span>
 
@@ -556,27 +556,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python代码</title>
-    <url>/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>python代码</p>
-<span id="more"></span>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -673,42 +655,9 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python语法</title>
-    <url>/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>python语法</p>
-<span id="more"></span>
-
-<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
-<ul>
-<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
-<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
-</ul>
-<p>下面是一个简单的示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)    <span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
-
-<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
-
-<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
-<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
-<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>python笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -822,9 +771,27 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python代码</title>
+    <url>/python%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>python代码</p>
+<span id="more"></span>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">100</span> </span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>());</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    l=<span class="built_in">input</span>().split()</span><br><span class="line">    P,A=Decimal(l[<span class="number">0</span>]),Decimal(l[<span class="number">1</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal, getcontext</span><br><span class="line">getcontext().prec = <span class="number">25</span></span><br><span class="line">pi=Decimal(<span class="string">&quot;3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679&quot;</span>)</span><br><span class="line">a=b=mi=<span class="number">1000000000000000000</span></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.read</span><br><span class="line">date=<span class="built_in">input</span>().split()</span><br><span class="line">n=<span class="built_in">int</span>(date[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    P=Decimal(date[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    A=Decimal(date[i*<span class="number">2</span>+<span class="number">2</span>])</span><br><span class="line">    t=<span class="built_in">abs</span>(P/A-pi)</span><br><span class="line">    <span class="keyword">if</span>(t&lt;mi <span class="keyword">or</span> (t==mi <span class="keyword">and</span> P&lt;a)):</span><br><span class="line">        mi=t; a=P; b=A;</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -1021,9 +988,39 @@
         <category>c++板子</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>c++</tag>
+        <tag>算法</tag>
         <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算几何</title>
+    <url>/c++%E6%9D%BF%E5%AD%90/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/oneway10101/p/17642080.html#%E6%B1%82%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AFpolygon_area">计算几何基本模板（二维）</a></p>
+<span id="more"></span>
+
+<p><strong>直线方向向量</strong></p>
+<p>对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。</p>
+<p>设一般方程: $A x+B y+C&#x3D;0$<br>写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$<br>那么它的斜率 $k&#x3D;-\frac{A}{B}$<br>过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$<br>取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。</p>
+<p><strong>两直线交点</strong></p>
+<p>直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$<br>直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$</p>
+<p>两条直线 $l_1$ 和 $l_2$ 的交点是：<br>$$<br>\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2} \right)<br>$$</p>
+<p>注意：如果 $A_2B_1 - A_1B_2 &#x3D; 0$，则方程组无解（平行且不重合）或有无穷多解（重合）。</p>
+<p><strong>直线一般式</strong></p>
+<p>$fs(x)$ 防止输出 $-0.00$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-6</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fs(x) (abs(x) &lt; eps) ? 0 : (x)</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>==(<span class="type">const</span> node&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x == b.x &amp;&amp; y == b.y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="type">double</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Line</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> a, b, c;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Line&amp; l)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a == l.a ? (b == l.b ? c &lt; l.c : b &lt; l.b) : (a &lt; l.a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>==(<span class="type">const</span> Line&amp; l)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a == l.a &amp;&amp; b == l.b &amp;&amp; c == l.c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 直线是否过点A</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">through</span><span class="params">(node A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a * A.x + b * A.y + c == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// l1,l2是否相交</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">intersect</span><span class="params">(Line l1, Line l2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> !(l<span class="number">1.</span>a * l<span class="number">2.</span>b == l<span class="number">1.</span>b * l<span class="number">2.</span>a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// l1,l2交点</span></span><br><span class="line"><span class="function">Point <span class="title">intersection</span><span class="params">(Line l1, Line l2)</span> </span>&#123;</span><br><span class="line">    <span class="type">double</span> A1 = l<span class="number">1.</span>a, B1 = l<span class="number">1.</span>b, C1 = l<span class="number">1.</span>c, A2 = l<span class="number">2.</span>a, B2 = l<span class="number">2.</span>b, C2 = l<span class="number">2.</span>c;</span><br><span class="line">    <span class="keyword">return</span> &#123; (B1 * C2 - B2 * C1) / (A1 * B2 - A2 * B1),(A1 * C2 - A2 * C1) / (A2 * B1 - A1 * B2) &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">gcd</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a, <span class="type">long</span> <span class="type">long</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!b) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">gcd</span>(b, a % b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// x1,x2不能相等</span></span><br><span class="line"><span class="function">Line <span class="title">make_line</span><span class="params">(node x1, node x2)</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> a = x<span class="number">1.</span>y - x<span class="number">2.</span>y;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> b = x<span class="number">2.</span>x - x<span class="number">1.</span>x;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> c = x<span class="number">1.</span>x * x<span class="number">2.</span>y - x<span class="number">1.</span>y * x<span class="number">2.</span>x;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> g = <span class="built_in">gcd</span>(a, <span class="built_in">gcd</span>(b, c));</span><br><span class="line">    a /= g, b /= g, c /= g;</span><br><span class="line">    <span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        a = -a, b = -b, c = -c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Line&#123; a,b,c &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>凸包</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> Pi = <span class="number">3.141592653589793</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="type">double</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x != b.x ? x &lt; b.x : y &lt; b.y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Point <span class="keyword">operator</span>+(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; x + b.x,y + b.y &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 向量</span></span><br><span class="line">    Point <span class="keyword">operator</span>-(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; x - b.x,y - b.y &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 点积</span></span><br><span class="line">    <span class="type">double</span> <span class="keyword">operator</span>*(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * b.x + y * b.y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 叉积</span></span><br><span class="line">    <span class="type">double</span> <span class="keyword">operator</span>^(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * b.y - y * b.x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 两点距离</span></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">dis</span><span class="params">(Point b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">hypot</span>(x - b.x, y - b.y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 绕p逆时针转angle弧度</span></span><br><span class="line">    <span class="function">Point <span class="title">rotate</span><span class="params">(Point p, <span class="type">double</span> angle)</span> </span>&#123;</span><br><span class="line">        Point v = (*<span class="keyword">this</span>) - p;</span><br><span class="line">        <span class="type">double</span> c = <span class="built_in">cos</span>(angle), s = <span class="built_in">sin</span>(angle);</span><br><span class="line">        <span class="keyword">return</span> &#123; p.x + v.x * c - v.y * s,p.y + v.y * c + v.x * s &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_right</span><span class="params">(Point a, Point b, Point c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ((c - a) ^ (b - a)) &gt;= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(p + <span class="number">1</span>, p + <span class="number">1</span> + size);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= size; i++) &#123;</span><br><span class="line">    <span class="keyword">while</span> (tt &gt;= <span class="number">2</span> &amp;&amp; <span class="built_in">is_right</span>(stk[tt - <span class="number">1</span>], stk[tt], p[i])) tt--;</span><br><span class="line">    stk[++tt] = p[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> len = tt;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = size; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">while</span> (tt &gt;= len + <span class="number">1</span> &amp;&amp; <span class="built_in">is_right</span>(stk[tt - <span class="number">1</span>], stk[tt], p[i])) tt--;</span><br><span class="line">    stk[++tt] = p[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c++板子</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>算法</tag>
+        <tag>计算几何</tag>
       </tags>
   </entry>
   <entry>
@@ -1063,33 +1060,36 @@
       </tags>
   </entry>
   <entry>
-    <title>计算几何</title>
-    <url>/c++%E6%9D%BF%E5%AD%90/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/oneway10101/p/17642080.html#%E6%B1%82%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AFpolygon_area">计算几何基本模板（二维）</a></p>
+    <title>python语法</title>
+    <url>/python%E7%AC%94%E8%AE%B0/%E9%98%BF%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>python语法</p>
 <span id="more"></span>
 
-<p><strong>直线方向向量</strong></p>
-<p>对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。</p>
-<p>设一般方程: $A x+B y+C&#x3D;0$<br>写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$<br>那么它的斜率 $k&#x3D;-\frac{A}{B}$<br>过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$<br>取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。</p>
-<p><strong>两直线交点</strong></p>
-<p>直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$<br>直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$</p>
-<p>两条直线 $l_1$ 和 $l_2$ 的交点是：<br>$$<br>\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2} \right)<br>$$</p>
-<p>注意：如果 $A_2B_1 - A_1B_2 &#x3D; 0$，则方程组无解（平行且不重合）或有无穷多解（重合）。</p>
-<p><strong>直线一般式</strong></p>
-<p>$fs(x)$ 防止输出 $-0.00$ 。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-6</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fs(x) (abs(x) &lt; eps) ? 0 : (x)</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>==(<span class="type">const</span> node&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x == b.x &amp;&amp; y == b.y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="type">double</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Line</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> a, b, c;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Line&amp; l)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a == l.a ? (b == l.b ? c &lt; l.c : b &lt; l.b) : (a &lt; l.a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>==(<span class="type">const</span> Line&amp; l)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a == l.a &amp;&amp; b == l.b &amp;&amp; c == l.c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 直线是否过点A</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">through</span><span class="params">(node A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a * A.x + b * A.y + c == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// l1,l2是否相交</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">intersect</span><span class="params">(Line l1, Line l2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> !(l<span class="number">1.</span>a * l<span class="number">2.</span>b == l<span class="number">1.</span>b * l<span class="number">2.</span>a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// l1,l2交点</span></span><br><span class="line"><span class="function">Point <span class="title">intersection</span><span class="params">(Line l1, Line l2)</span> </span>&#123;</span><br><span class="line">    <span class="type">double</span> A1 = l<span class="number">1.</span>a, B1 = l<span class="number">1.</span>b, C1 = l<span class="number">1.</span>c, A2 = l<span class="number">2.</span>a, B2 = l<span class="number">2.</span>b, C2 = l<span class="number">2.</span>c;</span><br><span class="line">    <span class="keyword">return</span> &#123; (B1 * C2 - B2 * C1) / (A1 * B2 - A2 * B1),(A1 * C2 - A2 * C1) / (A2 * B1 - A1 * B2) &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">gcd</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a, <span class="type">long</span> <span class="type">long</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!b) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">gcd</span>(b, a % b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// x1,x2不能相等</span></span><br><span class="line"><span class="function">Line <span class="title">make_line</span><span class="params">(node x1, node x2)</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> a = x<span class="number">1.</span>y - x<span class="number">2.</span>y;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> b = x<span class="number">2.</span>x - x<span class="number">1.</span>x;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> c = x<span class="number">1.</span>x * x<span class="number">2.</span>y - x<span class="number">1.</span>y * x<span class="number">2.</span>x;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> g = <span class="built_in">gcd</span>(a, <span class="built_in">gcd</span>(b, c));</span><br><span class="line">    a /= g, b /= g, c /= g;</span><br><span class="line">    <span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        a = -a, b = -b, c = -c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Line&#123; a,b,c &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="1-导入头文件"><a href="#1-导入头文件" class="headerlink" title="1. 导入头文件"></a>1. 导入头文件</h3><p>在Python中，我们使用<code>import</code>语句来导入头文件。有多种导入方式，常见的有以下两种形式：</p>
+<ul>
+<li><code>import 模块名</code>: 导入整个模块，并使用模块名作为前缀访问其中的函数和变量。</li>
+<li><code>from 模块名 import 备用名</code>: 导入模块中的指定函数、变量或类，可以直接使用备用名访问而不需要前缀。</li>
+</ul>
+<p>下面是一个简单的示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)    <span class="comment"># 输出3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt   // 可以将math.sqrt的math去掉</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  </span><br></pre></td></tr></table></figure>
 
-<p><strong>凸包</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> Pi = <span class="number">3.141592653589793</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="type">double</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x != b.x ? x &lt; b.x : y &lt; b.y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Point <span class="keyword">operator</span>+(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; x + b.x,y + b.y &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 向量</span></span><br><span class="line">    Point <span class="keyword">operator</span>-(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123; x - b.x,y - b.y &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 点积</span></span><br><span class="line">    <span class="type">double</span> <span class="keyword">operator</span>*(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * b.x + y * b.y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 叉积</span></span><br><span class="line">    <span class="type">double</span> <span class="keyword">operator</span>^(<span class="type">const</span> Point&amp; b)<span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * b.y - y * b.x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 两点距离</span></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">dis</span><span class="params">(Point b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">hypot</span>(x - b.x, y - b.y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 绕p逆时针转angle弧度</span></span><br><span class="line">    <span class="function">Point <span class="title">rotate</span><span class="params">(Point p, <span class="type">double</span> angle)</span> </span>&#123;</span><br><span class="line">        Point v = (*<span class="keyword">this</span>) - p;</span><br><span class="line">        <span class="type">double</span> c = <span class="built_in">cos</span>(angle), s = <span class="built_in">sin</span>(angle);</span><br><span class="line">        <span class="keyword">return</span> &#123; p.x + v.x * c - v.y * s,p.y + v.y * c + v.x * s &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_right</span><span class="params">(Point a, Point b, Point c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ((c - a) ^ (b - a)) &gt;= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(p + <span class="number">1</span>, p + <span class="number">1</span> + size);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= size; i++) &#123;</span><br><span class="line">    <span class="keyword">while</span> (tt &gt;= <span class="number">2</span> &amp;&amp; <span class="built_in">is_right</span>(stk[tt - <span class="number">1</span>], stk[tt], p[i])) tt--;</span><br><span class="line">    stk[++tt] = p[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> len = tt;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = size; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">while</span> (tt &gt;= len + <span class="number">1</span> &amp;&amp; <span class="built_in">is_right</span>(stk[tt - <span class="number">1</span>], stk[tt], p[i])) tt--;</span><br><span class="line">    stk[++tt] = p[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-重命名导入的模块或变量"><a href="#2-重命名导入的模块或变量" class="headerlink" title="2. 重命名导入的模块或变量"></a>2. 重命名导入的模块或变量</h3><p>在导入头文件时，我们可以使用<code>as</code>关键字来重命名导入的模块或变量。这样可以方便我们调用，避免名字冲突等问题。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"><span class="built_in">print</span>(m.sqrt(<span class="number">25</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi <span class="keyword">as</span> p</span><br><span class="line"><span class="built_in">print</span>(p)</span><br></pre></td></tr></table></figure>
 
+<h3 id="3-导入整个模块的所有内容"><a href="#3-导入整个模块的所有内容" class="headerlink" title="3. 导入整个模块的所有内容"></a>3. 导入整个模块的所有内容</h3><p>有时候，我们希望一次性导入整个模块的所有函数和变量，而不需要使用模块名前缀。可以使用<code>from 模块名 import *</code>的方式来实现。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">9</span>))</span><br><span class="line"><span class="built_in">print</span>(pi)</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用函数-数据类型"><a href="#常用函数-数据类型" class="headerlink" title="常用函数&#x2F;数据类型"></a>常用函数&#x2F;数据类型</h2><h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p><a href="https://blog.csdn.net/wuShiJingZuo/article/details/135620145">Python中常用的函数：map()详解_python map-CSDN博客</a></p>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p><a href="https://blog.csdn.net/Broken_x/article/details/139371467">深入理解Python中的元组 ——Tuple（）_元组(tuple)-CSDN博客</a></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>input().split()返回的是列表</p>
+<p><a href="https://blog.csdn.net/m0_70885101/article/details/126022872">Python 列表list详解（超详细）_python list-CSDN博客</a></p>
 ]]></content>
       <categories>
-        <category>c++板子</category>
+        <category>python笔记</category>
       </categories>
       <tags>
-        <tag>算法</tag>
-        <tag>c++</tag>
-        <tag>计算几何</tag>
+        <tag>python</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
 </search>
