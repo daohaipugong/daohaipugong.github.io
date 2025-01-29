@@ -1,13 +1,167 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="稻海家族大长老"><title>数据结构 | Pugong's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css"><link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss/build/pure-min.css"><link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="https://unpkg.com/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="https://unpkg.com/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="https://unpkg.com/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="https://unpkg.com/toastr/build/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-var toggle = document.querySelector('.darkmode-toggle');
-var html = document.querySelector('html');
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构 | Pugong's Blog</title><meta name="author" content="pugong"><meta name="copyright" content="pugong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="Pugong&#39;s Blog">
+<meta property="og:description" content="数据结构">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dhpugong.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2024-11-25T10:46:39.849Z">
+<meta property="article:modified_time" content="2025-01-12T04:15:32.843Z">
+<meta property="article:author" content="pugong">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dhpugong.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "数据结构",
+  "url": "https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
+  "image": "https://dhpugong.com/img/butterfly-icon.png",
+  "datePublished": "2024-11-25T10:46:39.849Z",
+  "dateModified": "2025-01-12T04:15:32.843Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "pugong",
+      "url": "https://dhpugong.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
 
-html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-toggle.addEventListener('click', () => {
-localStorage.dark = !(html.dataset.dark == 'true');
-html.dataset.dark = localStorage.dark;
-});</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">数据结构</h1><a id="logo" href="/.">Pugong's Blog</a><p class="description">Time waits for no one.</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/other/"><i class="fa fa-bars"> 其它</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">数据结构</h1><div class="post-meta">2024-11-25<span> | </span><span class="category"><a href="/categories/c-%E6%9D%BF%E5%AD%90/">c++板子</a></span></div><div class="post-content"><p>数据结构</p>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据结构',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pugong's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">数据结构</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">数据结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-25T10:46:39.849Z" title="发表于 2024-11-25 18:46:39">2024-11-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-12T04:15:32.843Z" title="更新于 2025-01-12 12:15:32">2025-01-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/c-%E6%9D%BF%E5%AD%90/">c++板子</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>数据结构</p>
 <span id="more"></span>
 
 <h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><h2 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h2><p>查询 $str(|str|&#x3D;m)$ 在 $s(|s|&#x3D;n)$ 中所有出现的位置的起始下标。</p>
@@ -93,13 +247,4 @@ html.dataset.dark = localStorage.dark;
 <p>$log2()$ 函数手写</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">    Log2[i] = Log2[i / <span class="number">2</span>] + <span class="number">1</span>;    </span><br></pre></td></tr></table></figure>
 
-</div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css?v=1.0.0"><p><span>本文标题：</span>数据结构</p><p><span>文章作者：</span>pugong</p><p><span>发布时间：</span>2024-11-25</p><p><span>最后更新：</span>2025-01-12</p><p><span>原始链接：</span><a href="/cpp/数据结构/">https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><div class="tags"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul></div><div class="post-nav"><a class="pre" href="/cpp/%E6%95%B0%E8%AE%BA/">数论</a><a class="next" href="/cpp/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="/img/1.jpg"/></a><p>稻海家族大长老</p><a class="info-icon" href="https://github.com/daohaipugong" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c-%E6%9D%BF%E5%AD%90/">c++板子</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E7%AC%94%E8%AE%B0/">python笔记</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© 2024 - 2025 <a href="/." rel="nofollow">Pugong's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="https://unpkg.com/@fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="https://unpkg.com/@fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
-if (search_path.length == 0) {
-  search_path = 'search.xml';
-}
-var path = '/' + search_path;
-searchFunc(path, 'local-search-input', 'local-search-result');
-</script><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/x-mathjax-config">MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://dhpugong.com">pugong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">https://dhpugong.com/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://dhpugong.com" target="_blank">Pugong's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/c/">c++</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/cpp/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" title="计算几何"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">计算几何</div></div><div class="info-2"><div class="info-item-1">计算几何基本模板（二维）   直线方向向量 对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。 设一般方程: $A x+B y+C&#x3D;0$写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$那么它的斜率 $k&#x3D;-\frac{A}{B}$过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。 两直线交点 直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$ 两条直线 $l_1$ 和 $l_2$ 的交点是：$$\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2}...</div></div></div></a><a class="pagination-related" href="/cpp/%E6%95%B0%E8%AE%BA/" title="数论"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">数论</div></div><div class="info-2"><div class="info-item-1">数论   卡特兰数定义卡特兰数是一个在组合数学里经常出现的一个数列，它并没有一个具体的意义，却是一个十分常见的数学规律 对卡特兰数的初步理解：有一些操作，这些操作有着一定的限制，如一种操作数不能超过另外一种操作数，或者两种操作不能有交集等，这些操作的合法操作顺序的数量 卡特兰数的前几项为 $ 1,1,2,5,14,42,132,429,1430,4862… $ 递归定义 $f_n&#x3D;f_0∗f_{n−1}+f_1∗f_{n−2}+…+f_{n−1}*f_0$，其中 $n≥2$  。 递推关系 $f_n&#x3D;\frac{4n−2}{n+1}f_{n−1}$ 通项公式 $f_n&#x3D;\frac{1}{n+1}C^n_{2n}$ 经化简后可得 $f_n&#x3D;C^n_{2n}−C^{n−1}_{2n}$ 只要我们在解决问题时得到了上面的一个关系，那么你就已经解决了这个问题，因为他们都是卡特兰数列 例题假设非法序列为 A，对应的序列为 B。每个 A 只有一个”第一个前缀和小于 0 的前缀“，所以每个 A 只能产生一个 B。而每个 B 想要还原到...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/cpp/STL-and-%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0%E5%8F%8A%E5%AE%B9%E5%99%A8/" title="STL &amp;&amp; 各种函数、容器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">STL &amp;&amp; 各种函数、容器</div></div><div class="info-2"><div class="info-item-1">Fragmented knowledge points+STL   STL各种容器常数均为大约值  vector：1 queue：1 map：13 unoredred_map：8  bitset() 相当于一个二进制的数组，并且可以直接用 01 串赋值  1234567891011121314bitset&lt;4&gt;a1;//长度为4，默认以0填充bitset&lt;8&gt;a2(12);//长度为8，将12以二进制保存，前面用0补充string s = &quot;100101&quot;;bitset&lt;10&gt;a3(s);//长度为10，前面用０补充//c++11下，char可以赋值给bitsetchar s2[] =...</div></div></div></a><a class="pagination-related" href="/cpp/%E5%AD%97%E7%AC%A6%E4%B8%B2-and-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" title="字符串 &amp;&amp; 输入输出"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">字符串 &amp;&amp; 输入输出</div></div><div class="info-2"><div class="info-item-1">字符串   输入scanfscanf 读字符时会读入空格、换行 scanf 读字符串时不会读入空格、换行 12345char c,cc;int x;cin&gt;&gt;x&gt;&gt;c&gt;&gt;cc;scanf(&quot;%d%c%c&quot;,&amp;x,&amp;c,&amp;cc);cout&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;cc;  输入 1212  输出 122  cincin 不会读入开始的换行、空格，遇到空格、换行停止 1234//char s[1000];//char s;string s;cin&gt;&gt;s;  getchar()getchar 会读入换行和空格，但是不能与IOS同时使用。 1char c=getchar();  ignore()从输入流中移除（忽略）下一个字符 如果计数值达到 $a$ 或者被抛弃的字符是 $ch$ ，则 cin.ignore()...</div></div></div></a><a class="pagination-related" href="/cpp/dp/" title="dp"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">dp</div></div><div class="info-2"><div class="info-item-1">动态规划   初始化 常见模型最长上升子序列模型导弹拦截 - 洛谷  STL 二分 12345678910111213// 严格上升：  &gt;        lower_bound()// 不严格上升：&gt;=        upper_bound()// 严格下降：  &lt;     lower_bound()    greater&lt;int&gt;()// 不严格下降：&lt;=        upper_bound()	greater&lt;int&gt;()vector&lt;int&gt; stk;cin&gt;&gt;n;for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];for(int i=1;i&lt;=n;i++)&#123;    if(stk.empty()||a[i]&gt;stk.back()) stk.push_back(a[i]);    else...</div></div></div></a><a class="pagination-related" href="/cpp/%E6%95%B0%E8%AE%BA/" title="数论"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">数论</div></div><div class="info-2"><div class="info-item-1">数论   卡特兰数定义卡特兰数是一个在组合数学里经常出现的一个数列，它并没有一个具体的意义，却是一个十分常见的数学规律 对卡特兰数的初步理解：有一些操作，这些操作有着一定的限制，如一种操作数不能超过另外一种操作数，或者两种操作不能有交集等，这些操作的合法操作顺序的数量 卡特兰数的前几项为 $ 1,1,2,5,14,42,132,429,1430,4862… $ 递归定义 $f_n&#x3D;f_0∗f_{n−1}+f_1∗f_{n−2}+…+f_{n−1}*f_0$，其中 $n≥2$  。 递推关系 $f_n&#x3D;\frac{4n−2}{n+1}f_{n−1}$ 通项公式 $f_n&#x3D;\frac{1}{n+1}C^n_{2n}$ 经化简后可得 $f_n&#x3D;C^n_{2n}−C^{n−1}_{2n}$ 只要我们在解决问题时得到了上面的一个关系，那么你就已经解决了这个问题，因为他们都是卡特兰数列 例题假设非法序列为 A，对应的序列为 B。每个 A 只有一个”第一个前缀和小于 0 的前缀“，所以每个 A 只能产生一个 B。而每个 B 想要还原到...</div></div></div></a><a class="pagination-related" href="/cpp/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" title="计算几何"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">计算几何</div></div><div class="info-2"><div class="info-item-1">计算几何基本模板（二维）   直线方向向量 对 $Ax+By+C&#x3D;0$ , 法向量 $(A, B)$ , 方向向量 $(-B, A)$ 。 设一般方程: $A x+B y+C&#x3D;0$写成斜截式： $y&#x3D;-\frac{A}{B} x-\frac{C}{B}$那么它的斜率 $k&#x3D;-\frac{A}{B}$过原点做一条平行线 $y&#x3D;-\frac{A}{B} x$取 $x&#x3D;B$ ，得到 $y&#x3D;-A$.那么得到一个方向向量即 $\alpha&#x3D;(B,-A)$ 。 两直线交点 直线 $l_1$ 的一般式为：$$ A_1x + B_1y + C_1 &#x3D; 0 $$直线 $l_2$ 的一般式为：$$ A_2x + B_2y + C_2 &#x3D; 0 $$ 两条直线 $l_1$ 和 $l_2$ 的交点是：$$\left( \frac{B_1C_2 - B_2C_1}{A_1B_2 - A_2B_1}, \frac{A_1C_2 - A_2C_1}{A_2B_1 - A_1B_2}...</div></div></div></a><a class="pagination-related" href="/cpp/%E6%9D%82%E9%A1%B9/" title="杂项"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-25</div><div class="info-item-2">杂项</div></div><div class="info-2"><div class="info-item-1">杂项   O2、O3优化1#pragma GCC optimize(2)  1#pragma GCC optimize(3,&quot;Ofast&quot;,&quot;inline&quot;)  运算符优先级https://cppreference.cn/w/cpp/language/operator_precedence    优先级 操作符 描述 例子 结合性    1 () [] -&gt; . :: ++ -- 调节优先级的括号、 数组下标访问、 通过指向对象的指针访问成员的、 通过对象本身访问成员的、 作用域、 后置自增、 后置自减  从左到右   2 ! ~ ++ -- - + * &amp; (type) sizeof 逻辑取反 按位取反 前置自增 前置自减 一元取负 一元取正 解引用 取地址 类型转换 返回对象占用的字节数  从右到左   3 -&gt;* .* 在指针上通过指向成员的指针访问成员的、 在对象上通过指向成员的指针访问成员的  从左到右   4 * / % 乘法、 除法、 取余数  从左到右   5 + - 加法、...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">pugong</div><div class="author-info-description">稻海家族大长老</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-number">2.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-number">3.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KMP"><span class="toc-number">4.</span> <span class="toc-text">KMP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trie"><span class="toc-number">5.</span> <span class="toc-text">Trie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">6.</span> <span class="toc-text">并查集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">6.1.</span> <span class="toc-text">普通并查集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9"><span class="toc-number">6.1.1.</span> <span class="toc-text">路径压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6-%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9"><span class="toc-number">6.1.2.</span> <span class="toc-text">启发式合并+路径压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E7%A7%A9%E5%90%88%E5%B9%B6"><span class="toc-number">6.1.3.</span> <span class="toc-text">按秩合并</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%9F%9F%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">6.2.</span> <span class="toc-text">扩展域并查集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E6%9D%83%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">6.3.</span> <span class="toc-text">加权并查集</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">7.</span> <span class="toc-text">堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-number">8.</span> <span class="toc-text">哈希表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">9.</span> <span class="toc-text">线段树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">9.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E5%92%8C"><span class="toc-number">9.2.</span> <span class="toc-text">区间和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95%E4%B9%98%E6%B3%95%E6%B7%B7%E5%90%88"><span class="toc-number">9.3.</span> <span class="toc-text">加法乘法混合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84"><span class="toc-number">10.</span> <span class="toc-text">树状数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">10.1.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%95%E7%82%B9%E4%BF%AE%E6%94%B9-%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">10.2.</span> <span class="toc-text">1. 单点修改 + 区间查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%8C%BA%E9%97%B4%E4%BF%AE%E6%94%B9-%E5%8D%95%E7%82%B9%E6%9F%A5%E8%AF%A2"><span class="toc-number">10.3.</span> <span class="toc-text">2. 区间修改 + 单点查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8C%BA%E9%97%B4%E4%BF%AE%E6%94%B9-%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">10.4.</span> <span class="toc-text">3. 区间修改 + 区间查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%8C%E7%BB%B4%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84"><span class="toc-number">10.5.</span> <span class="toc-text">4. 二维树状数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#st%E8%A1%A8"><span class="toc-number">11.</span> <span class="toc-text">st表</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/python/%E8%AF%AD%E6%B3%95/" title="python语法">python语法</a><time datetime="2024-12-20T04:46:17.546Z" title="发表于 2024-12-20 12:46:17">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/python/%E5%B8%B8%E7%94%A8%E5%BA%93/" title="python常用库">python常用库</a><time datetime="2024-12-20T04:46:17.544Z" title="发表于 2024-12-20 12:46:17">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/python/%E4%BB%A3%E7%A0%81/" title="python代码">python代码</a><time datetime="2024-12-20T04:46:17.542Z" title="发表于 2024-12-20 12:46:17">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cpp/%E6%95%B0%E8%AE%BA/" title="数论">数论</a><time datetime="2024-11-25T10:46:39.851Z" title="发表于 2024-11-25 18:46:39">2024-11-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">数据结构</a><time datetime="2024-11-25T10:46:39.849Z" title="发表于 2024-11-25 18:46:39">2024-11-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By pugong</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
