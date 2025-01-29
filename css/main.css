@@ -1276,7 +1276,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #6a7acd;
+    background: #414ef1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2990,6 +2990,9 @@ a.category-list-link:before {
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 15px;
   line-height: 18px;
+}
+.busuanzi-count {
+  display: none !important;
 }
 code {
   padding: 2px 4px;
