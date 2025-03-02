@@ -1,0 +1,52 @@
+#poem {
+    width: 200px;
+    /* 调整宽度为200px */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    word-wrap: break-word;
+    /* 防止内容溢出 */
+}
+
+#poem_sentence {
+    font-size: 14px;
+    /* 调整字体大小 */
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.4;
+    /* 调整行间距 */
+}
+
+#poem_sentence::before {
+    content: "📖 ";
+    font-size: 14px;
+    color: #888;
+}
+
+#poem_info {
+    font-size: 12px;
+    /* 调整字体大小 */
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+    /* 调整行间距 */
+}
+
+#poem_info::before {
+    content: "✍️ ";
+    font-size: 14px;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    #poem {
+        width: 100%;
+        /* 在小屏幕上宽度自适应 */
+        margin: 10px 0;
+    }
+}

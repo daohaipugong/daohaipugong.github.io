@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    color: blue;
+    color: rgb(11, 103, 241);
     /* 设置超链接的颜色为蓝色 */
     text-decoration: none;
     /* 移除超链接的下划线 */
@@ -35,8 +35,8 @@ a:hover {
 /* 导航栏样式 */
 
 .navbar {
+    background-color: #4c89af;
     height: 80px;
-    background-color: #333;
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -59,8 +59,12 @@ a:hover {
 }
 
 .navbar .logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     padding: 10px 20px;
+    text-shadow: 0 0 2px hsl(40, 28.57%, 28.82%), 0 0 2px hsl(40, 28.57%, 28.82%), 0 0 2px hsl(40, 28.57%, 28.82%);
+    /*多个叠加*/
+    color: #fff;
 }
 
 .main-content {
@@ -69,27 +73,27 @@ a:hover {
     width: 100%;
     margin: 0;
     /* 清除默认的外边距 */
-    padding: 20px 20px;
-    /* 添加左右10px的内边距 */
     box-sizing: border-box;
     /* 确保padding不影响总宽度 */
     line-height: 1.7;
 }
 
 .sidebar {
-    background-color: #fff;
-    padding: 20px;
+    background-color: #eee;
     width: 15%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0 20px 20px;
 }
 
 .content {
     width: 80%;
     flex: 1;
     margin-left: 20px;
-    background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 表单样式 */
@@ -124,7 +128,7 @@ a:hover {
 
 /* 页脚样式 */
 .footer {
-    background-color: #333;
+    background-color: #454545;
     color: white;
     text-align: center;
     width: 100%;
@@ -133,7 +137,8 @@ a:hover {
 }
 
 blockquote {
-    font-family: 'KaiTi', '楷体', serif;
+    font-family: fangsong, Times, "Times New Roman", Georgia, serif;
+    /* text-shadow: none; */
     white-space: pre;
     font-size: 18px;
     /* 设置字体大小 */

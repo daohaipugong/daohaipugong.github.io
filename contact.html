@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pugong'home</title>
+    <link rel="shortcut icon" href="images/favicon32.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/poems.css">
 </head>
 
 <body>
@@ -24,7 +26,19 @@
     <div class="main-content">
         <!-- 侧边栏 -->
         <div class="sidebar">
-
+            <div id="poem">
+                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+                <div id="poem_sentence"></div>
+                <div id="poem_info"></div>
+                <script type="text/javascript">
+                    jinrishici.load(function (result) {
+                        var sentence = document.querySelector("#poem_sentence")
+                        var info = document.querySelector("#poem_info")
+                        sentence.innerHTML = result.data.content
+                        info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+                    });
+                </script>
+            </div>
         </div>
 
         <!-- 内容区 -->
