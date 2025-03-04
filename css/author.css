@@ -24,10 +24,17 @@
     object-fit: cover;
 }
 
-.author-intro p {
+.author-intro .name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.author-intro .sign {
     font-size: 14px;
     color: #666;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 /* GitHub链接样式 */
